@@ -1,0 +1,27 @@
+{
+  "name": "wrs-turkey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbugrahansav/wrs-turkey.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mbugrahansav/wrs-turkey/issues"
+  },
+  "homepage": "https://github.com/mbugrahansav/wrs-turkey#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "overrides": {
+    "braces": "3.0.3"
+  }
+}
