@@ -1,16 +1,15 @@
 {
   "nav_about": "Hakkımızda",
-  "nav_accommodation": "Kurumsal Konaklama",
-  "nav_meetings_events": "Toplantı ve Etkinlikler",
-  "nav_security": "Güvenlik",
-  "nav_references": "Referanslar",
+  "nav_activities": "Faaliyetler",
+  "nav_projects": "Projeler",
+  "nav_careers": "Kariyer",
   "nav_contact": "Bize Ulaşın",
 
   "main_a_title": "WRS'NİN İŞİNİZE GÜÇ\n <span class='indent'></span> KATMASINA İZİN VERİN",
   "main_a_desc": "''Rakipsiz kurumsal konaklama ve etkinlik yönetim hizmetleri''",
-  "main_b_title": "2025 İş Seyehati ve Etkinlik Harcama Planlaması",
-  "main_b_par_1": "İş seyahatleri ve etkinlik harcamaları, şirketlerin finansal sağlığı üzerinde önemli bir etkiye sahip olabilir. WRS Turkey olarak harcama planlarını; ARAC, AMEA, LATAM, NORAM bölgeleri özelinde değerlendirerek harcama planları yapmaktayız. Bu harcamaların etkin bir şekilde",
-  "main_b_par_2": "planlanması ve yönetilmesi, maliyetleri kontrol altında tutmak, bütçe aşımını önlemek ve yatırım getirisini (ROI) maksimize etmek için kritik öneme sahiptir. İşte dünya genelindeki iş seyahati ve etkinlik harcamaları için kapsamlı bir finansal planlama rehberi için <span class='clickable-text' id='openPopup' data-file='financial-planning-guide'> tıklayınız </span> .",
+  "main_b_title": "Erşah İnşaat'a Dair",
+  "main_b_par_1": "Erşah Yapı olarak 1992’den bu yana yurt içinde taahhüt, gayrimenkul yatırım ve yönetimi alanında, deneyimli ekibimiz ve zengin makine parkurumuzla birçok başarılı proje gerçekleştirdik. Etik ve şeffaf çalışma prensiplerimizle sektörde saygın bir konuma ulaştık.Faaliyetlerimizde çevreye uyumlu çalışmak, sağlıklı ve güvenli iş ortamları oluşturmak ve projelerimizi zamanında tamamlamak temel ilkelerimizdendir. Bu yaklaşım, güvenilir ve sürdürülebilir bir iş anlayışını garanti eder.",
+  "main_b_par_2": "",
 
   "wrs_corp_app": "WRS Corp Giriş",
 

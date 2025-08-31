@@ -4200,7 +4200,7 @@ fieldset:disabled .btn {
   z-index: 10000;
 }
 
-.dropdown {
+/* .dropdown {
   width: fit-content;
   position: relative;
   display: inline-block;
@@ -4209,12 +4209,12 @@ fieldset:disabled .btn {
   border: solid 1px #1C425D;
   background: #1C425D;
   border-radius: 30px;
-}
+} */
 
 @media (max-width: 991px) {
 
-  .wrs-turkey-logo {
-    background-image: url("../assets/img/logos/wrs-turkey-gold.png") !important;
+  .ersah-insaat-logo {
+    background-image: url("../assets/img/logos/ersah-logo.png") !important;
   }
 
   .dropdown {
@@ -4269,13 +4269,13 @@ fieldset:disabled .btn {
   display: none !important;
 }
 
-.dropdown:hover {
+/* .dropdown:hover {
   background: transparent;
   color: #1D425D;
   border: solid 1px #1C425D;
-}
+}*/
 
-.dropdown:hover .wrs-app-btn {
+.wrs-app-btn {
   color: #1D425D;
 }
 
@@ -4458,8 +4458,8 @@ fieldset:disabled .btn {
   }
 }
 
-.wrs-turkey-logo {
-  background-image: url("../assets/img/logos/wrs-turkey-gold.png");
+.ersah-insaat-logo {
+  background-image: url("../assets/img/logos/ersah-logo.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -4467,7 +4467,7 @@ fieldset:disabled .btn {
   height: 80px;
 }
 
-.wrs-turkey-logo img {
+.ersah-insaat-logo img {
 
   display: block;
   width: auto;
@@ -12802,7 +12802,7 @@ p {
 }
 
 #mainNav {
-  background: #CAAB7C;
+  background: #ffffff;
 }
 
 #mainNav .navbar-toggler {
@@ -12829,13 +12829,13 @@ p {
 #mainNav .navbar-nav .nav-item .nav-link {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.85rem;
-  color: #1D425D;
+  color: #000;
   letter-spacing: 0.0625em;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: white !important;
+  color: #bf9733 !important;
 }
 
 @media (min-width: 992px) {
@@ -12860,8 +12860,8 @@ p {
     transition: all 0.4s;
   }
 
-  #mainNav.navbar-shrink .wrs-turkey-logo {
-    background-image: url('../assets/img/logos/wrs-turkey-gold.png');
+  #mainNav.navbar-shrink .ersah-insaat-logo {
+    background-image: url('../assets/img/logos/ersah-logo.png');
   }
 
   .navbar-dark .language-trigger {
@@ -13046,7 +13046,7 @@ p {
 }
 
 @media (max-width: 1400px) {
-  #landing .wrs-turkey-logo {
+  #landing .ersah-insaat-logo {
     width: 170px !important;
     height: 60px !important;
   }
@@ -13065,7 +13065,7 @@ p {
 
 @media (max-width: 1300px) {
 
-  .wrs-turkey-logo {
+  .ersah-insaat-logo{
     width: 120px;
     height: 30px;
   }
@@ -13118,12 +13118,12 @@ p {
     background-color: #CAAB7C;
   }
 
-  .wrs-turkey-logo {
+  .ersah-insaat-logo {
     width: 125px;
     height: 50px;
   }
 
-  .wrs-turkey-logo {
+  .ersah-insaat-logo {
     margin-left: 1rem !important;
     width: 150px !important;
     height: 50px !important;
