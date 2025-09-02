@@ -18,9 +18,14 @@
   <!-- Font Awesome 6 CDN (en az bu olmalı) -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <!-- Google fonts-->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" -->
+  rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" /> -->
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.min.css"
     rel="stylesheet" />
@@ -99,12 +104,12 @@
       <div class="container">
         <div class="row g-0 justify-content-end">
           <div class="image l-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
-            <img alt="..." src="../src/assets/img/wrs-corp-images/main-b.png" />
+            <img alt="..." src="../src/assets/img/resim-yok.jpg" />
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 align-content-center mt-2">
-            <h2 data-i18n="main_b_title" style="font-style: italic; color: black;"></h2>
+            <h2 data-i18n="main_b_title" style=" color: black;"></h2>
             <div class="two-col">
-              <p data-i18n="main_b_par_1" style="font-style: italic; color: black;"></p>
+              <p data-i18n="main_b_par_1" style=" color: black;"></p>
               <!-- <p data-i18n="main_b_par_2" style="font-style: italic; color: black;"></p> -->
             </div>
           </div>
@@ -112,47 +117,42 @@
 
     </section>
 
-    <!-- about -->
-    <section class="page-section bg-light py-5" id="about">
+    <section class="page-section min-h-auto pt-5" style="padding-bottom: 11rem;" id="about">
       <div class="container">
         <div class="features-section-title">
           <h2 class="section-heading" data-i18n="about_heading"></h2>
-          <p data-i18n="about_desc"></p>
         </div>
         <div class="row g-0 justify-content-center">
-          <div class="col-lg-6 col-md-12 col-sm-12 features-section">
-            <div class="hover-expand-container text-align-end">
-              <h2 style="white-space: pre-line;" data-i18n="about_title"></h2>
-              <ul class="hover-expand-list">
-                <li class="slide-in-up">
-                  <span data-i18n="about_text_preview_1" class="text-preview"></span>
-                  <span data-i18n="about_text_full_1" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-                <li class="slide-in-up">
-                  <span data-i18n="about_text_preview_2" class="text-preview"></span>
-                  <span data-i18n="about_text_full_2" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-                <li class="slide-in-up">
-                  <span data-i18n="about_text_preview_3" class="text-preview"></span>
-                  <span data-i18n="about_text_full_3" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-                <li class="slide-in-up">
-                  <span data-i18n="about_text_preview_4" class="text-preview"></span>
-                  <span data-i18n="about_text_full_4" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-              </ul>
-            </div>
+          <!-- Sol görsel -->
+          <div class="image xl-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
+            <img alt="About image" src="./src/assets/img/resim-yok.jpg" />
           </div>
-          <div class="image l-image col-lg-6 col-md-12 col-sm-12 slide-in-right">
-            <img alt="..." src="../src/assets/img/wrs-corp-images/about.png" />
+
+          <!-- Sağ kısım -->
+          <div class="col-lg-6 col-md-12 col-sm-12 features-section">
+            <div class="hover-expand-container">
+              <h2 style="white-space: pre-line;" data-i18n="about_title"></h2>
+
+              <!-- Kartlar -->
+              <div class="cards-wrapper">
+                <div class="about-card slide-in-up">
+                  <h3 data-i18n="about_title_1"></h3>
+                  <p data-i18n="about_text_1"></p>
+                </div>
+
+                <div class="about-card slide-in-up">
+                  <h3 data-i18n="about_title_2"></h3>
+                  <p data-i18n="about_text_2"></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+
+
 
     <!-- services carousel -->
     <!-- <section class="page-section bg-darkblue min-h-auto justify-content-center py-5">
@@ -249,36 +249,73 @@
         </div>
     </section> -->
 
-    <!-- accommodation a -->
-    <section class="page-section min-h-auto pt-5" style="padding-bottom: 11rem;" id="accommodation">
+    <!-- Activities Section -->
+    <section class="page-section min-h-auto pt-5" style="padding-bottom: 11rem;" id="activities">
       <div class="container">
         <div class="features-section-title">
-          <h2 class="section-heading" data-i18n="accommodation_heading"></h2>
+          <h2 class="section-heading reveal" data-i18n="activities_heading"></h2>
+          <p class="section-subheading reveal" data-i18n="activities_desc"></p>
         </div>
-        <div class="row g-0 justify-content-center">
+
+        <!-- Turizm & Sağlık -->
+        <div class="row g-0 justify-content-center activity-row reveal">
           <div class="image xl-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
-            <img alt="..." src="../src/assets/img/wrs-corp-images/accommodation.png" />
+            <img alt="Turizm Sağlık"
+              src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" />
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 features-section">
             <div class="hover-expand-container">
-              <h2 style="white-space: pre-line;" data-i18n="accommodation_title"></h2>
+              <h2 data-i18n="activities_title_1"></h2>
               <ul class="hover-expand-list">
                 <li class="slide-in-up">
-                  <span data-i18n="accommodation_text_preview_1" class="text-preview"></span>
-                  <span data-i18n="accommodation_text_full_1" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
+                  <span class="text-preview" data-i18n="activities_text_preview_1"></span>
+                  <span class="text-full" data-i18n="activities_text_full_1"></span>
+                  <span class="expand-hint" data-i18n="expand_hint"></span>
                 </li>
                 <li class="slide-in-up">
-                  <span data-i18n="accommodation_text_preview_2" class="text-preview"></span>
-                  <span data-i18n="accommodation_text_full_2" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
+                  <span class="text-preview" data-i18n="activities_text_preview_2"></span>
+                  <span class="text-full" data-i18n="activities_text_full_2"></span>
+                  <span class="expand-hint" data-i18n="expand_hint"></span>
                 </li>
               </ul>
+              <div class="activity-overlay">
+                <div class="activity-icon">🏥</div>
+              </div>
             </div>
+          </div>
+        </div>
+
+        <!-- İnşaat & Mimarlık -->
+        <div class="row g-0 justify-content-center activity-row reveal">
+          <div class="col-lg-6 col-md-12 col-sm-12 features-section order-lg-1 order-2">
+            <div class="hover-expand-container">
+              <h2 data-i18n="activities_title_2"></h2>
+              <ul class="hover-expand-list">
+                <li class="slide-in-up">
+                  <span class="text-preview" data-i18n="activities_text_preview_3"></span>
+                  <span class="text-full" data-i18n="activities_text_full_3"></span>
+                  <span class="expand-hint" data-i18n="expand_hint"></span>
+                </li>
+                <li class="slide-in-up">
+                  <span class="text-preview" data-i18n="activities_text_preview_4"></span>
+                  <span class="text-full" data-i18n="activities_text_full_4"></span>
+                  <span class="expand-hint" data-i18n="expand_hint"></span>
+                </li>
+              </ul>
+              <div class="activity-overlay">
+                <div class="activity-icon">🏗️</div>
+              </div>
+            </div>
+          </div>
+          <div class="image xl-image col-lg-6 col-md-12 col-sm-12 slide-in-right order-lg-2 order-1">
+            <img alt="İnşaat Mimarlık"
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" />
           </div>
         </div>
       </div>
     </section>
+
+
 
     <!-- interlude a -->
     <!-- <section class="why-wrs page-section bg-darkblue min-h-auto">
@@ -542,22 +579,23 @@
           <img src="../src/assets/img/logos/wrs-turkey.png" alt="Logo 4" />
         </div>
       </div> -->
-      <!-- Footer-->
-      <footer class="footer" style="display: none;">
-        <div class="container py-1">
-          <div class="text-center">Copyright © Simgesel Media 2025</div>
-        </div>
-      </footer>
-    </div>
-    <div id="popupOverlay" class="popup-overlay hidden"></div>
-    <div id="popup" class="popup hidden">
-      <div class="popup-card">
-        <button class="close-btn close-popup"><img class="close-popup" src="../src/assets/img/icons/close-icon.png" alt="close-icon"></button>
-        <div class="top-line"></div>
-        <div class="popup-content">
-        </div>
+    <!-- Footer-->
+    <footer class="footer" style="display: none;">
+      <div class="container py-1">
+        <div class="text-center">Copyright © Simgesel Media 2025</div>
+      </div>
+    </footer>
+  </div>
+  <div id="popupOverlay" class="popup-overlay hidden"></div>
+  <div id="popup" class="popup hidden">
+    <div class="popup-card">
+      <button class="close-btn close-popup"><img class="close-popup" src="../src/assets/img/icons/close-icon.png"
+          alt="close-icon"></button>
+      <div class="top-line"></div>
+      <div class="popup-content">
       </div>
     </div>
+  </div>
   </div>
 
 
