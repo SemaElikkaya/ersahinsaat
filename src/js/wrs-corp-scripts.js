@@ -130,8 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const track = document.getElementById('logoTrack');
 
@@ -193,6 +191,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const textFull = li.querySelector('.text-full');
 
     li.addEventListener('mouseenter', function () {
+      // expanded class'ını ekle
+      this.classList.add('expanded');
+
       textPreview.style.display = 'none';
       textFull.style.display = 'block';
 
@@ -208,6 +209,9 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(() => {
         textPreview.style.display = 'block';
         textFull.style.display = 'none';
+
+        // expanded class'ını çıkar
+        this.classList.remove('expanded');
       }, 300);
     });
   });
@@ -327,9 +331,6 @@ window.i18n = {
 
 
 
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -346,9 +347,6 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(el);
   });
 });
-
-
-
 
 
 
@@ -409,7 +407,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
   function navbarShrink() {
     const navbar = document.getElementById('mainNav');
     const pageTop = document.getElementById('page-top');
@@ -436,4 +433,144 @@ document.addEventListener('DOMContentLoaded', () => {
       offset: 70
     });
   }
+});
+
+// Fancybox Lightbox - JS dosyanıza ekleyin (GLightbox kodunu silin)
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Scroll pozisyonunu kaydet
+  let savedScrollY = 0;
+  
+  // Fancybox başlatma
+  if (typeof Fancybox !== 'undefined') {
+    Fancybox.bind('[data-fancybox]', {
+      // Temel ayarlar
+      animated: true,
+      showClass: 'f-fadeIn',
+      hideClass: 'f-fadeOut',
+      
+      // UI ayarları
+      closeButton: 'outside',
+      dragToClose: false,
+      
+      // Toolbar ayarları
+      Toolbar: {
+        display: {
+          left: [],
+          middle: [],
+          right: ['close']
+        }
+      },
+      
+      // Scroll ayarları
+      autoFocus: false,
+      trapFocus: false,
+      placeFocusBack: false,
+      
+      // Açılma callback'i
+      on: {
+        init: (fancybox) => {
+          // Scroll pozisyonunu kaydet
+          savedScrollY = window.scrollY;
+          
+          // Body'yi kilitle ama pozisyonu koru
+          document.body.style.position = 'fixed';
+          document.body.style.top = `-${savedScrollY}px`;
+          document.body.style.width = '100%';
+          document.body.style.overflow = 'hidden';
+        },
+        
+        destroy: (fancybox) => {
+          // Body'yi serbest bırak
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.width = '';
+          document.body.style.overflow = '';
+          
+          // Orijinal scroll pozisyonuna dön (timeout ile çakışmayı engelle)
+          setTimeout(() => {
+            window.scrollTo(0, savedScrollY);
+          }, 0);
+        }
+      }
+    });
+  }
+  
+  // Overlay icon click handler
+  document.querySelectorAll('.overlay-icon').forEach(icon => {
+    icon.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Parent project-image'yi bul
+      const projectImage = icon.closest('.project-image');
+      if (projectImage) {
+        const img = projectImage.querySelector('img[data-fancybox]');
+        if (img) {
+          // Fancybox'ı manuel aç
+          img.click();
+        }
+      }
+    });
+  });
+  
+  // Hover efektleri (değişmedi)
+  const projectCards = document.querySelectorAll('.project-card');
+  projectCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      if (window.innerWidth > 768) {
+        this.style.transform = 'translateY(-10px)';
+      }
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+  });
+
+  // Counter animasyon (değişmedi)
+  function initCounterAnimation() {
+    const counters = document.querySelectorAll('.stat-number');
+
+    if (counters.length === 0) {
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+          const target = parseInt(entry.target.getAttribute('data-count'));
+          const counter = entry.target;
+          let current = 0;
+
+          const increment = target / 60;
+          const duration = 2000;
+          const stepTime = duration / 60;
+
+          counter.classList.add('animated');
+
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              current = target;
+              counter.textContent = Math.floor(target);
+              clearInterval(timer);
+            } else {
+              counter.textContent = Math.floor(current);
+            }
+          }, stepTime);
+        }
+      });
+    }, {
+      threshold: 0.5,
+      rootMargin: '0px 0px -100px 0px'
+    });
+
+    counters.forEach(counter => {
+      observer.observe(counter);
+    });
+  }
+
+  // Counter'ı başlat
+  initCounterAnimation();
 });

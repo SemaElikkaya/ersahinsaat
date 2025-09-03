@@ -9,7 +9,6 @@
   "main_a_desc": "Sahneye Çıkıyor",
   "main_b_title": "Erşah İnşaat'a Dair",
   "main_b_par_1": "Temel ilkelerimizi sürdürülebilir kılmak ve geliştirmek için bilimsel yöntem ve teknolojileri, yasal mevzuat ve yönetmeliklerin gereğince kullanıyoruz.Erşah Yapı olarak kalite politikamız; sektöründe en ileri teknolojinin takibi ve zamanında kullanılması yanı sıra düzenli ve kalifiye kadro ile de çalışmak suretiyle işveren müşteri memnuniyeti odaklı en iyi hizmetin sunulmasıdır.Takım ruhunu benimseyen, özveri ile çalışan ekibimiz ve elemanlarımız kalitemizin mimarlarıdır.",
-  "main_b_par_2": "",
 
   "wrs_corp_app": "WRS Corp Giriş",
 
@@ -29,18 +28,7 @@
   "about_text_full_3": "WRS Turkey, sadece bir konaklama sistemi olmanın ötesine geçerek, şirketlerin kurumsal seyahat politikalarına tam uyum sağlayan, maliyet etkin ve yüksek kaliteli çözümler sunan bir stratejik ortak olmayı hedefler. İş seyahatlerinizin ve etkinliklerinizin sorunsuz geçmesi için WRS Turkey'in uzmanlığından faydalanabilirsiniz.",
   "about_text_preview_4": "Kurumsal konaklama ihtiyaçlarınız için WRS Turkey ile iletişime geçerek size özel çözümler hakkında bilgi alabilir ve iş süreçlerinizdeki verimliliği artırabilirsiniz.",
   "about_text_full_4": "Kurumsal konaklama ihtiyaçlarınız için WRS Turkey ile iletişime geçerek size özel çözümler hakkında bilgi alabilir ve iş süreçlerinizdeki verimliliği artırabilirsiniz. WRS Turkey'in Sunduğu Avantajlar için <span class='clickable-text' id='openPopup' data-file='about'> tıklayınız </span> .",
-  
-  "services_heading": "HİZMETLERİMİZ",
-  "services_desc": "Kurumsal Çözüm Ortağınız",
-  "service_accommodation": "Kurumsal Konaklama",
-  "service_flight_ticket": "Yurtiçi ve Yurtdışı Uçak Bileti",
-  "service_meeting": "Stratejik Toplantı Yönetimi (STY)",
-  "service_events": "Yurtiçi ve Yurtdışı Kurumsal Etkinlikler",
-  "service_sos": "Seyehat Güvenliği ve Risk Yönetimi (International SOS)",
-  "service_exhibition": "Yurtiçi ve Yurtdışı Fuar Organizasyonu",
-  "service_rent_a_car": "Araç Kiralama",
-  "service_fleet": "Filo Kiralama",
-  "service_vip": "Yurtiçi ve Yurtdışı VIP Transfer",
+
 
   "activities_heading": "FAALİYETLER",
   "activities_desc": "Farklı sektörlerde uzman kadromuzla kaliteli hizmet sunuyoruz",
@@ -55,16 +43,26 @@
   "activities_text_preview_4": "İnşaat sektöründe yenilikçi yaklaşımlarla müşteri memnuniyetini...",
   "activities_text_full_4": "İnşaat sektöründe yenilikçi yaklaşımlarla müşteri memnuniyetini en üst düzeye çıkarıyoruz. Projelerimizi zamanında ve bütçe dahilinde tamamlayarak, güvenilir ve sürdürülebilir yapılar inşa ediyoruz. İş güvenliği ve çevre dostu uygulamalara verdiğimiz önemle  sektörde fark yaratıyoruz.",
 
-  "interlude_heading": "WRS Corp Kurumsal Konaklama Sisteminin\n Neden Daha İyi Olduğunu Öğrenin",
-  "interlude_desc": "Size nasıl yardımcı olabileceğimiz hakkında konuşmak, ürünlerimiz ve hizmetlerimiz hakkında bilgi almak için",
 
-  "accommodation_b_desc": "İş Seyahatini Basitleştirmek",
-  "accommodation_b_title": "7/24 Hareket Halindeyken",
-  "accommodation_b_text_preview": "WRS'nin entegre WRS Corp sistemi, iş seyahati yapanların ve seyahat düzenleyenlerin hayatlarını kolaylaştırmaya yardımcı olan mobil",
-  "accommodation_b_text_full": "WRS'nin entegre WRS Corp sistemi, iş seyahati yapanların ve seyahat düzenleyenlerin hayatlarını kolaylaştırmaya yardımcı olan mobil uygulamamızı içerir.  İster akıllı telefonda ister tablette olsun, WRS Corp uygulaması zamandan tasarruf sağlayan ve üretkenliği artıran temiz, sezgisel bir arayüz sunar. WRS'yi iş seyahati sağlayıcısı olarak kullanan kuruluşların çalışanları için mevcut olan WRS Corp, şirketinizin seyahat programına dijital bir ağ geçididir ve çok hızlı işlem yapmanızı sağlar.",
-  
-  "interlude_b_heading": "Çalışanlarınızın İş Seyehatlerini Basitleştirin",
-  "interlude_b_desc": "Onlara İhtiyaç Duydukları Dijital Araçları ve Kesintisiz Bir Kullanıcı Deneyimini Sunun",
+  "projects_heading": "Projelerimiz",
+  "project_title_1":"Pendik Saray Evleri",
+  "project_text_1":"Konut Projesi",
+  "project_title_2":"Kartal Lema Konakları",
+  "project_text_2":"Konut Projesi",
+  "project_title_3":"Maltepe İnönü Cd. Konut Projesi",
+  "project_text_3":"Konut Projesi",
+  "project_title_4":"Pendik Sahili Konut Projesi",
+  "project_text_4":"Konut Projesi",
+  "project_title_5":"Maltepe Rezidans",
+  "project_text_5":"Konut Projesi",
+  "project_title_6":"Kentsel Dönüşüm Projelerimiz",
+  "project_text_6":"Kentsel Dönüşüm",
+
+
+  "stat_label_1": "Tamamlanan Proje",
+  "stat_label_2": "Mutlu Müşteri",
+  "stat_label_3": "Devam Eden Proje",
+  "stat_label_4": "Yıllık Tecrübe",
 
   "meetings_events_heading": "Toplantı ve Etkinlikler",
   "meetings_events_desc": "Markanızı Öne Çıkaran Deneyimler",
