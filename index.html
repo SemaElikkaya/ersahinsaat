@@ -23,14 +23,14 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" -->
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" /> -->
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.min.css"
     rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
-  <link href="../src/css/wrs-corp.css" rel="stylesheet" />
+  <link href="src/css/wrs-corp.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -104,12 +104,12 @@
       <div class="container">
         <div class="row g-0 justify-content-end">
           <div class="image l-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
-            <img alt="..." src="../src/assets/img/resim-yok.jpg" />
+            <img alt="..." src="src/assets/img/ersah_1.png" />
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 align-content-center mt-2">
-            <h2 data-i18n="main_b_title" style=" color: black;"></h2>
+            <h2 data-i18n="main_b_title" style="font-style: italic; color: black;"></h2>
             <div class="two-col">
-              <p data-i18n="main_b_par_1" style=" color: black;"></p>
+              <p data-i18n="main_b_par_1" style="font-style: italic; color: black;"></p>
               <!-- <p data-i18n="main_b_par_2" style="font-style: italic; color: black;"></p> -->
             </div>
           </div>
@@ -117,29 +117,24 @@
 
     </section>
 
-    <section class="page-section min-h-auto pt-5" style="padding-bottom: 11rem;" id="about">
+    <!-- About Section - Class based -->
+    <section class="about-section  min-h-auto pt-5" style="padding-bottom: 11rem;" id="about"> 
       <div class="container">
-        <div class="features-section-title">
-          <h2 class="section-heading" data-i18n="about_heading"></h2>
+        <div class="section-title">
+          <h2 data-i18n="about_heading"></h2>
         </div>
         <div class="row g-0 justify-content-center">
-          <!-- Sol görsel -->
           <div class="image xl-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
-            <img alt="About image" src="./src/assets/img/resim-yok.jpg" />
+            <img alt="About image" src="src/assets/img/ersah_2.png" />
           </div>
-
-          <!-- Sağ kısım -->
-          <div class="col-lg-6 col-md-12 col-sm-12 features-section">
+          <div class="col-lg-6 col-md-12 col-sm-12 ">
             <div class="hover-expand-container">
               <h2 style="white-space: pre-line;" data-i18n="about_title"></h2>
-
-              <!-- Kartlar -->
               <div class="cards-wrapper">
                 <div class="about-card slide-in-up">
                   <h3 data-i18n="about_title_1"></h3>
                   <p data-i18n="about_text_1"></p>
                 </div>
-
                 <div class="about-card slide-in-up">
                   <h3 data-i18n="about_title_2"></h3>
                   <p data-i18n="about_text_2"></p>
@@ -151,117 +146,18 @@
       </div>
     </section>
 
-
-
-
-    <!-- services carousel -->
-    <!-- <section class="page-section bg-darkblue min-h-auto justify-content-center py-5">
-      <div class="container no-after mb-0">
-        <div class="features-section-title m-0">
-          <h2 class="section-heading" data-i18n="services_heading" style="color: white;"></h2>
-          <p data-i18n="services_desc" style="color: #d3d3d3;"></p>
-        </div>
-        <div class="carousel-container">
-          <button class="arrow-btn" id="prevBtn"><img src="../src/assets/img/icons/left-chevron.png"
-              alt="left-chevron"></button>
-          <div class="carousel-wrapper">
-            <div class="carousel" id="carousel">
-              <div class="service-item" data-index="0">
-
-                <div class="icon-container">
-                  <div class="service-icon"><img src="../src/assets/img/service-icons/accommodation-icon.png"
-                      alt="accommodation-icon">
-                  </div>
-                </div>
-                <span data-i18n="service_accommodation" class="service-name"></span>
-              </div>
-
-              <div class="service-item" data-index="2">
-                <div class="icon-container">
-                  <div class="service-icon"><img src="../src/assets/img/service-icons/airplane-ticket.png"
-                      alt="airplane-ticket"></div>
-                </div>
-                <span data-i18n="service_flight_ticket" class="service-name"></span>
-              </div>
-
-              <div class="service-item" data-index="8">
-                <div class="icon-container">
-                  <div class="service-icon"><img src="../src/assets/img/service-icons/meeting-icon.png"
-                      alt="meeting-icon">
-                  </div>
-                </div>
-                <span data-i18n="service_meeting" class="service-name"></span>
-              </div>
-
-              <div class="service-item" data-index="5">
-                <div class="icon-container">
-                  <div class="service-icon"><img src="../src/assets/img/service-icons/corporate-event-icon.png"
-                      alt="corporate-event-icon.png"></div>
-                </div>
-                <span data-i18n="service_events" class="service-name"></span>
-              </div>
-
-              <div class="service-item" data-index="1">
-                <div class="icon-container">
-                  <div class="service-icon"><img src="../src/assets/img/service-icons/safety-sos-icon.png"
-                      alt="safety-sos-icon.png"></div>
-                </div>
-                <span data-i18n="service_sos" class="service-name"></span>
-              </div>
-
-              <div class="service-item" data-index="3">
-                <div class="icon-container">
-                  <div class="service-icon"><img src="../src/assets/img/service-icons/exhibition-icon.png"
-                      alt="exhibition-icon">
-                  </div>
-                </div>
-                <span data-i18n="service_exhibition" class="service-name"></span>
-              </div>
-
-              <div class="service-item" data-index="4">
-                <div class="icon-container">
-                  <div class="service-icon"><img src="../src/assets/img/service-icons/rent-a-car-icon-2.png"
-                      alt="rent-a-car-icon-2.png"></div>
-                </div>
-                <span data-i18n="service_rent_a_car" class="service-name"></span>
-              </div>
-
-              <div class="service-item" data-index="6">
-                <div class="icon-container">
-                  <div class="service-icon"><img src="../src/assets/img/icons/fleet-icon.png" alt="fleet-icon.png">
-                  </div>
-                </div>
-                <span data-i18n="service_fleet" class="service-name"></span>
-              </div>
-
-              <div class="service-item" data-index="7">
-                <div class="icon-container">
-                  <div class="service-icon"><img src="../src/assets/img/service-icons/vip-transportion-icon.png"
-                      alt="vip-transportion-icon.png"></div>
-                </div>
-                <span data-i18n="service_vip" class="service-name"></span>
-              </div>
-
-            </div>
-          </div>
-          <button class="arrow-btn" id="nextBtn"><img src="../src/assets/img/icons/right-chevron.png"
-              alt="left-chevron"></button>
-        </div>
-    </section> -->
-
-    <!-- Activities Section -->
-    <section class="page-section min-h-auto pt-5" style="padding-bottom: 11rem;" id="activities">
+    <!-- Activities Section - Class based -->
+    <section class="activities-section  min-h-auto pt-5" style="padding-bottom: 11rem;" id="activities">
       <div class="container">
-        <div class="features-section-title">
-          <h2 class="section-heading reveal" data-i18n="activities_heading"></h2>
-          <p class="section-subheading reveal" data-i18n="activities_desc"></p>
+        <div class="section-title">
+          <h2 data-i18n="activities_heading"></h2>
+          <p data-i18n="activities_desc"></p>
         </div>
 
-        <!-- Turizm & Sağlık -->
-        <div class="row g-0 justify-content-center activity-row reveal">
+        <div class="row g-0 justify-content-center activity-row">
           <div class="image xl-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
             <img alt="Turizm Sağlık"
-              src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" />
+              src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" />
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 features-section">
             <div class="hover-expand-container">
@@ -285,8 +181,7 @@
           </div>
         </div>
 
-        <!-- İnşaat & Mimarlık -->
-        <div class="row g-0 justify-content-center activity-row reveal">
+        <div class="row g-0 justify-content-center activity-row">
           <div class="col-lg-6 col-md-12 col-sm-12 features-section order-lg-1 order-2">
             <div class="hover-expand-container">
               <h2 data-i18n="activities_title_2"></h2>
@@ -309,7 +204,38 @@
           </div>
           <div class="image xl-image col-lg-6 col-md-12 col-sm-12 slide-in-right order-lg-2 order-1">
             <img alt="İnşaat Mimarlık"
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" />
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section - Class based -->
+    <section class="projects-page-section page-section min-h-auto pt-5" style="padding-bottom: 9rem;" id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="section-heading" data-i18n="meetings_events_heading"></h2>
+        </div>
+        <div class="row g-0 justify-content-center">
+          <div class="image l-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
+            <img alt="..." src="../src/assets/img/wrs-corp-images/meeting-events.png" />
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 ">
+            <div class="hover-expand-container">
+              <h2 data-i18n="meetings_events_title"></h2>
+              <ul class="hover-expand-list">
+                <li class="slide-in-up">
+                  <span data-i18n="meetings_events_text_preview_1" class="text-preview"></span>
+                  <span data-i18n="meetings_events_text_full_1" class="text-full"></span>
+                  <span data-i18n="expand_hint" class="expand-hint"></span>
+                </li>
+                <li class="slide-in-up">
+                  <span data-i18n="meetings_events_text_preview_2" class="text-preview"></span>
+                  <span data-i18n="meetings_events_text_full_2" class="text-full"></span>
+                  <span data-i18n="expand_hint" class="expand-hint"></span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -333,7 +259,7 @@
     </section> -->
 
     <!-- accommodation b -->
-    <section class="page-section min-h-auto bg-light py-10">
+    <!-- <section class="page-section min-h-auto bg-light py-10">
       <div class="container">
         <div class="row g-0 justify-content-center">
           <div class="col-lg-6 col-md-12 col-sm-12 accommodation-container-b">
@@ -351,7 +277,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- interlude b -->
     <!-- <section class="why-wrs page-section bg-darkblue min-h-auto">
@@ -367,42 +293,6 @@
         </div>
       </div>
     </section> -->
-
-    <!-- meetings & events a -->
-    <section class="page-section min-h-auto pt-5" style="padding-bottom: 9rem;" id="meetingsandevents">
-      <div class="container">
-        <div class="features-section-title">
-          <h2 class="section-heading" data-i18n="meetings_events_heading"></h2>
-        </div>
-        <div class="row g-0 justify-content-center">
-          <div class="image l-image col-lg-6 col-md-12 col-sm-12 slid-in-left">
-            <img alt="..." src="../src/assets/img/wrs-corp-images/meeting-events.png" />
-          </div>
-          <div class="col-lg-6 col-md-12 col-sm-12 features-section">
-            <div class="hover-expand-container">
-              <h2 data-i18n="meetings_events_title"></h2>
-              <ul class="hover-expand-list">
-                <li class="slide-in-up">
-                  <span data-i18n="meetings_events_text_preview_1" class="text-preview"></span>
-                  <span data-i18n="meetings_events_text_full_1" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-                <li class="slide-in-up">
-                  <span data-i18n="meetings_events_text_preview_2" class="text-preview"></span>
-                  <span data-i18n="meetings_events_text_full_2" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-                <li class="slide-in-up">
-                  <span data-i18n="meetings_events_text_preview_3" class="text-preview"></span>
-                  <span data-i18n="meetings_events_text_full_3" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- meetings & events b -->
     <!-- <section class="page-section bg-light" id="meetingsandevents">
@@ -450,7 +340,7 @@
     <!-- security -->
     <section class="page-section py-5" id="security">
       <div class="container">
-        <div class="features-section-title">
+        <div class="section-title">
           <h2 class="section-heading" data-i18n="security_heading"></h2>
           <p data-i18n="security_desc"></p>
         </div>
@@ -458,7 +348,7 @@
           <div class="image xl-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
             <img alt="..." src="../src/assets/img/wrs-corp-images/security.png" />
           </div>
-          <div class="col-lg-6 col-md-12 col-sm-12 features-section">
+          <div class="col-lg-6 col-md-12 col-sm-12 ">
             <div class="hover-expand-container">
               <h2 data-i18n="security_title"></h2>
               <ul class="hover-expand-list">
