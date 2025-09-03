@@ -13631,14 +13631,18 @@ p {
   }
 }
 
-/* ===================
-   CONTACT SECTION
-   =================== */
+.contact-section {
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+}
+
 section#contact {
   background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+  background-image: url("../assets/img/background/contact-bg.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 section#contact .section-heading {
@@ -13666,9 +13670,6 @@ section#contact form#contactForm .form-control:focus {
   margin-bottom: 0.3rem;
 }
 
-/* ===================
-   SECTION TITLES
-   =================== */
 .section-title {
   position: relative;
   margin-bottom: 4rem;
@@ -14044,15 +14045,18 @@ body.lightbox-open {
 .glightbox-container {
   /* position: fixed; zaten GLightbox tarafından ekleniyor, bu CSS'i kaldırdık */
   display: flex;
-  align-items: center; /* Resmi dikeyde ortala */
-  justify-content: center; /* Resmi yatayda ortala */
+  align-items: center;
+  /* Resmi dikeyde ortala */
+  justify-content: center;
+  /* Resmi yatayda ortala */
 }
 
 /* Resmin kendi scrollbarını engelle */
 .glightbox-container a {
   max-width: 100% !important;
   max-height: 100% !important;
-  object-fit: contain; /* Görseli oranını bozmadan konteynere sığdır */
+  object-fit: contain;
+  /* Görseli oranını bozmadan konteynere sığdır */
   display: block;
   margin: auto;
 }
@@ -14065,6 +14069,6 @@ body.lightbox-open {
 }
 
 
-.fancybox__content > .f-button.is-close-btn {
+.fancybox__content>.f-button.is-close-btn {
   display: none !important;
 }
