@@ -2,7 +2,6 @@ const el = document.querySelector('.hover-expand-list');
 const height = getComputedStyle(el).height;
 el.style.maxHeight = height;
 
-
 // Popup --------------------------------------------------------------------------
 
 function getCurrentLang() {
@@ -37,8 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 // Footer --------------------------------------------------------------------------
 
 const footer = document.querySelector('.footer');
@@ -56,131 +53,6 @@ window.addEventListener('scroll', () => {
     footer.style.display = 'none';
   }
 });
-
-
-// Carousel ------------------------------------------------------------------------
-class ServiceCarousel {
-  constructor() {
-    this.carousel = document.getElementById('carousel');
-    this.prevBtn = document.getElementById('prevBtn');
-    this.nextBtn = document.getElementById('nextBtn');
-
-    this.items = Array.from(this.carousel.children);
-    this.totalItems = this.items.length;
-    this.currentIndex = Math.floor(this.totalItems / 2); // Ortadakinden başla
-    this.itemWidth = 220; // min-width (140px) + gap (80px)
-
-    this.init();
-  }
-
-  init() {
-    this.updateCarousel();
-    this.bindEvents();
-  }
-
-  updateCarousel() {
-    // Active class'ı temizle
-    this.items.forEach(item => item.classList.remove('active'));
-
-    // Ortadaki item'ı active yap
-    this.items[this.currentIndex].classList.add('active');
-
-    // Carousel'ı ortala - wrapper'ın tam ortasına getir
-    const wrapperWidth = this.carousel.parentElement.offsetWidth;
-    const translateX = -(this.currentIndex * this.itemWidth) + (wrapperWidth / 2) - (this.itemWidth / 2) + 40; // +40 gap düzeltmesi için
-    this.carousel.style.transform = `translateX(${translateX}px)`;
-  }
-
-  next() {
-    if (this.currentIndex < this.totalItems - 1) {
-      this.currentIndex++;
-    } else {
-      this.currentIndex = 0; // Sona gelince başa dön
-    }
-    this.updateCarousel();
-  }
-
-  prev() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-    } else {
-      this.currentIndex = this.totalItems - 1; // Başa gelince sona git
-    }
-    this.updateCarousel();
-  }
-
-  bindEvents() {
-    this.nextBtn?.addEventListener('click', () => this.next());
-    this.prevBtn?.addEventListener('click', () => this.prev());
-
-    // Klavye navigasyonu
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') this.prev();
-      if (e.key === 'ArrowRight') this.next();
-    });
-  }
-}
-
-// Carousel'ı başlat
-document.addEventListener('DOMContentLoaded', () => {
-  new ServiceCarousel();
-});
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const track = document.getElementById('logoTrack');
-
-  const logoNames = [
-    'agrotv.jpg',
-    'alfa-tohum.jpg',
-    'allied-minerals.png',
-    'artmar.jpg',
-    'donas.jpg',
-    'ertanlar.jpg',
-    'fantom.png',
-    'hilleshog.png',
-    'indigo.jpg',
-    'kayseri-seker.jpg',
-    'kilicoglu-kiremit.jpg',
-    'kuzey-tohumculuk.jpg',
-    'KWS.jpg',
-    'lgtohum.jpg',
-    'likrom.jpg',
-    'limagrein.jpg',
-    'maribo.jpg',
-    'marka-tarim.png',
-    'netafim.jpg',
-    'safi-smart.jpg',
-    'sevanderhave.jpg',
-    'syngenta.jpg',
-    'taegu-tec.jpg',
-    'tessenderlo.jpg',
-    'ziraat-bankasi.jpg'
-  ];
-
-  track.innerHTML = '';
-
-  logoNames.forEach((logoName, index) => {
-    const img = document.createElement('img');
-    img.src = `../src/assets/img/references-logos/${logoName}`;
-    img.alt = `Reference Logo ${index + 1}`;
-    img.loading = 'lazy';
-
-    img.onerror = function () {
-      this.style.display = 'none';
-      console.warn(`Logo yüklenemedi: ${logoName}`);
-    };
-
-    track.appendChild(img);
-  });
-
-  const originalContent = track.innerHTML;
-  track.innerHTML = originalContent + originalContent;
-});
-
 
 // calculate expanded card height --------------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
