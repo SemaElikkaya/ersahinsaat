@@ -13631,6 +13631,7 @@ p {
   }
 }
 
+<<<<<<< Updated upstream
 .contact-section {
   display: flex;
   align-items: center;
@@ -13643,15 +13644,44 @@ section#contact {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+=======
+.contact-section{
+  height: 80vh;
+  background-image: url("../assets/img/contact-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "vollkorn", serif;
+>>>>>>> Stashed changes
 }
 
-section#contact .section-heading {
-  color: #fff;
+.contact-section .section-heading {
+  color: #bf9733;
+  font-family: "vollkorn", serif;
 }
 
 section#contact form#contactForm .form-control:focus {
   border-color: #bf9733;
   box-shadow: none;
+}
+
+.contact-cards {
+  justify-content: space-between;
+}
+
+.contact-container{
+  height: 100%;
+}
+
+.contact-info-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
 }
 
 .contact-info {
@@ -13664,9 +13694,8 @@ section#contact form#contactForm .form-control:focus {
 }
 
 .contact-label {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  color: white;
+  color: #fff;
   margin-bottom: 0.3rem;
 }
 
