@@ -13631,7 +13631,6 @@ p {
   }
 }
 
-<<<<<<< Updated upstream
 .contact-section {
   display: flex;
   align-items: center;
@@ -13644,15 +13643,6 @@ section#contact {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-=======
-.contact-section{
-  height: 80vh;
-  background-image: url("../assets/img/contact-bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  font-family: "vollkorn", serif;
->>>>>>> Stashed changes
 }
 
 .contact-section .section-heading {
