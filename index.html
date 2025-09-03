@@ -55,13 +55,6 @@
             <li class="nav-item"><a class="nav-link" data-i18n="nav_contact" href="#contact"></a></li>
           </ul>
           <div class="navbar-collapse-dropdowns">
-            <!-- <div class="dropdown">
-              <a href="https://app.wrsturkey.com" target="_blank" style="text-decoration: none;">
-                <button class="wrs-app-btn">
-                  <span data-i18n="wrs_corp_app"></span>
-                </button>
-              </a>
-            </div> -->
             <div class="language-selector">
               <div class="language-trigger">
                 <img src="../src/assets/img/icons/lang-icon.png" alt="language-icon">
@@ -91,6 +84,7 @@
         </div>
       </div>
     </nav>
+
     <!-- Main a -->
     <section class="page-section bg-custom" style="min-height: 48vh; margin-top: 72.7px;">
       <div class="container">
@@ -114,11 +108,10 @@
             </div>
           </div>
         </div>
-
     </section>
 
-    <!-- About Section - Class based -->
-    <section class="about-section  min-h-auto pt-5" style="padding-bottom: 11rem;" id="about"> 
+    <!-- About Section -->
+    <section class="about-section  min-h-auto pt-5" style="padding-bottom: 11rem;" id="about">
       <div class="container">
         <div class="section-title">
           <h2 data-i18n="about_heading"></h2>
@@ -128,7 +121,7 @@
             <img alt="About image" src="src/assets/img/ersah_2.png" />
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 ">
-            <div class="hover-expand-container">
+            <div class="about-hover-expand">
               <h2 style="white-space: pre-line;" data-i18n="about_title"></h2>
               <div class="cards-wrapper">
                 <div class="about-card slide-in-up">
@@ -146,61 +139,69 @@
       </div>
     </section>
 
-    <!-- Activities Section - Class based -->
+    <!-- Activities Section -->
     <section class="activities-section  min-h-auto pt-5" style="padding-bottom: 11rem;" id="activities">
       <div class="container">
         <div class="section-title">
           <h2 data-i18n="activities_heading"></h2>
           <p data-i18n="activities_desc"></p>
         </div>
-
         <div class="row g-0 justify-content-center activity-row">
           <div class="image xl-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
             <img alt="Turizm Sağlık"
               src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" />
           </div>
-          <div class="col-lg-6 col-md-12 col-sm-12 features-section">
-            <div class="hover-expand-container">
-              <h2 data-i18n="activities_title_1"></h2>
-              <ul class="hover-expand-list">
-                <li class="slide-in-up">
-                  <span class="text-preview" data-i18n="activities_text_preview_1"></span>
-                  <span class="text-full" data-i18n="activities_text_full_1"></span>
-                  <span class="expand-hint" data-i18n="expand_hint"></span>
-                </li>
-                <li class="slide-in-up">
-                  <span class="text-preview" data-i18n="activities_text_preview_2"></span>
-                  <span class="text-full" data-i18n="activities_text_full_2"></span>
-                  <span class="expand-hint" data-i18n="expand_hint"></span>
-                </li>
-              </ul>
-              <div class="activity-overlay">
-                <div class="activity-icon">🏥</div>
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="activities-container">
+              <div class="activities-heading">
+                <h2 data-i18n="activities_title_1"></h2>
+                <div class="activity-icon">
+                  <img style="margin-top: 3px;" src="./src/assets/img/icons/health-icon.png" alt="construction-icon">
+                </div>
+              </div>
+              <div class="activities-hover-expand">
+                <ul class="hover-expand-list">
+                  <li class="slide-in-up">
+                    <span class="text-preview" data-i18n="activities_text_preview_1"></span>
+                    <span class="text-full" data-i18n="activities_text_full_1"></span>
+                    <span class="expand-hint" data-i18n="expand_hint"></span>
+                  </li>
+                  <li class="slide-in-up">
+                    <span class="text-preview" data-i18n="activities_text_preview_2"></span>
+                    <span class="text-full" data-i18n="activities_text_full_2"></span>
+                    <span class="expand-hint" data-i18n="expand_hint"></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
 
         <div class="row g-0 justify-content-center activity-row">
-          <div class="col-lg-6 col-md-12 col-sm-12 features-section order-lg-1 order-2">
-            <div class="hover-expand-container">
-              <h2 data-i18n="activities_title_2"></h2>
-              <ul class="hover-expand-list">
-                <li class="slide-in-up">
-                  <span class="text-preview" data-i18n="activities_text_preview_3"></span>
-                  <span class="text-full" data-i18n="activities_text_full_3"></span>
-                  <span class="expand-hint" data-i18n="expand_hint"></span>
-                </li>
-                <li class="slide-in-up">
-                  <span class="text-preview" data-i18n="activities_text_preview_4"></span>
-                  <span class="text-full" data-i18n="activities_text_full_4"></span>
-                  <span class="expand-hint" data-i18n="expand_hint"></span>
-                </li>
-              </ul>
-              <div class="activity-overlay">
-                <div class="activity-icon">🏗️</div>
+          <div class="col-lg-6 col-md-12 col-sm-12 order-lg-1 order-2">
+            <div class="activities-container">
+              <div class="activities-heading">
+                <h2 data-i18n="activities_title_2"></h2>
+                <div class="activity-icon">
+                  <img src="./src/assets/img/icons/construction-icon.png" alt="health-icon">
+                </div>
+              </div>
+              <div class="activities-hover-expand">
+                <ul class="hover-expand-list">
+                  <li class="slide-in-up">
+                    <span class="text-preview" data-i18n="activities_text_preview_3"></span>
+                    <span class="text-full" data-i18n="activities_text_full_3"></span>
+                    <span class="expand-hint" data-i18n="expand_hint"></span>
+                  </li>
+                  <li class="slide-in-up">
+                    <span class="text-preview" data-i18n="activities_text_preview_4"></span>
+                    <span class="text-full" data-i18n="activities_text_full_4"></span>
+                    <span class="expand-hint" data-i18n="expand_hint"></span>
+                  </li>
+                </ul>
               </div>
             </div>
+
           </div>
           <div class="image xl-image col-lg-6 col-md-12 col-sm-12 slide-in-right order-lg-2 order-1">
             <img alt="İnşaat Mimarlık"
@@ -211,168 +212,8 @@
     </section>
 
     <!-- Projects Section - Class based -->
-    <section class="projects-page-section page-section min-h-auto pt-5" style="padding-bottom: 9rem;" id="projects">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="section-heading" data-i18n="meetings_events_heading"></h2>
-        </div>
-        <div class="row g-0 justify-content-center">
-          <div class="image l-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
-            <img alt="..." src="../src/assets/img/wrs-corp-images/meeting-events.png" />
-          </div>
-          <div class="col-lg-6 col-md-12 col-sm-12 ">
-            <div class="hover-expand-container">
-              <h2 data-i18n="meetings_events_title"></h2>
-              <ul class="hover-expand-list">
-                <li class="slide-in-up">
-                  <span data-i18n="meetings_events_text_preview_1" class="text-preview"></span>
-                  <span data-i18n="meetings_events_text_full_1" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-                <li class="slide-in-up">
-                  <span data-i18n="meetings_events_text_preview_2" class="text-preview"></span>
-                  <span data-i18n="meetings_events_text_full_2" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- interlude a -->
-    <!-- <section class="why-wrs page-section bg-darkblue min-h-auto">
-      <div class="container py-8">
-        <div class="features-section-title m-0">
-          <h2 class="section-heading" data-i18n="interlude_heading" style="color: white; white-space: pre-line;"></h2>
-          <p data-i18n="interlude_desc" style="color: #d3d3d3;"></p>
-          <a href="#contact" style="text-decoration: none;">
-            <button class="contact-btn justify-self-center">
-              <span data-i18n="nav_contact"></span>
-            </button>
-          </a>
-        </div>
-      </div>
+    <!-- <section class="projects-page-section page-section min-h-auto pt-5" style="padding-bottom: 9rem;" id="projects">
     </section> -->
-
-    <!-- accommodation b -->
-    <!-- <section class="page-section min-h-auto bg-light py-10">
-      <div class="container">
-        <div class="row g-0 justify-content-center">
-          <div class="col-lg-6 col-md-12 col-sm-12 accommodation-container-b">
-            <div class="hover-expand-container text-align-end">
-              <h2 data-i18n="accommodation_b_title"></h2>
-              <ul class="hover-expand-list">
-                <li class="slide-in-up no-expand">
-                  <span data-i18n="accommodation_b_text_full"></span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="image l-image col-lg-6 col-md-12 col-sm-12 slide-in-right">
-            <img alt="..." src="../src/assets/img/wrs-corp-images/accommodation-b.png" />
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- interlude b -->
-    <!-- <section class="why-wrs page-section bg-darkblue min-h-auto">
-      <div class="container py-8">
-        <div class="features-section-title m-0">
-          <h2 class="section-heading" data-i18n="interlude_b_heading" style="color: white;"></h2>
-          <p data-i18n="interlude_b_desc" style="color: #d3d3d3;"></p>
-          <a href="#contact" style="text-decoration: none;">
-            <button class="contact-btn justify-self-center">
-              <span data-i18n="nav_contact"></span>
-            </button>
-          </a>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- meetings & events b -->
-    <!-- <section class="page-section bg-light" id="meetingsandevents">
-      <div class="container">
-        <div class="row g-0 justify-content-center">
-          <div class="col-lg-6 col-md-12 col-sm-12 features-section">
-            <div class="hover-expand-container text-align-end">
-              <h2 data-i18n="meetings_events_b_title"></h2>
-              <ul class="hover-expand-list">
-                <li class="slide-in-up">
-                  <span data-i18n="meetings_events_b_text_preview_1" class="text-preview"></span>
-                  <span data-i18n="meetings_events_b_text_full_1" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-                <li class="slide-in-up">
-                  <span data-i18n="meetings_events_b_text_preview_2" class="text-preview"></span>
-                  <span data-i18n="meetings_events_b_text_full_2" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="image l-image col-lg-6 col-md-12 col-sm-12 slide-in-right">
-            <img alt="..." src="../src/assets/img/wrs-corp-images/meeting-events-b.png" />
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- interlude c -->
-    <!-- <section class="why-wrs page-section bg-darkblue min-h-auto">
-      <div class="container py-8">
-        <div class="features-section-title m-0">
-          <h2 class="section-heading" data-i18n="interlude_c_heading" style="color: white;"></h2>
-          <p data-i18n="interlude_c_desc" style="color: #d3d3d3;"></p>
-          <a href="#contact" style="text-decoration: none;">
-            <button class="contact-btn justify-self-center">
-              <span data-i18n="nav_contact"></span>
-            </button>
-          </a>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- security -->
-    <section class="page-section py-5" id="security">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="section-heading" data-i18n="security_heading"></h2>
-          <p data-i18n="security_desc"></p>
-        </div>
-        <div class="row g-0 justify-content-center">
-          <div class="image xl-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
-            <img alt="..." src="../src/assets/img/wrs-corp-images/security.png" />
-          </div>
-          <div class="col-lg-6 col-md-12 col-sm-12 ">
-            <div class="hover-expand-container">
-              <h2 data-i18n="security_title"></h2>
-              <ul class="hover-expand-list">
-                <li class="slide-in-up">
-                  <span data-i18n="security_text_preview_1" class="text-preview"></span>
-                  <span data-i18n="security_text_full_1" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-                <li class="slide-in-up">
-                  <span data-i18n="security_text_preview_2" class="text-preview"></span>
-                  <span data-i18n="security_text_full_2" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-                <li class="slide-in-up">
-                  <span data-i18n="security_text_preview_3" class="text-preview"></span>
-                  <span data-i18n="security_text_full_3" class="text-full"></span>
-                  <span data-i18n="expand_hint" class="expand-hint"></span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Contact-->
     <section class="page-section pt-0" id="contact">
@@ -460,15 +301,6 @@
         </div>
       </div>
     </section>
-    <!-- <div class="logo-marquee-fixed">
-      <div class="logo-marquee">
-        <div class="logo-track" id="logoTrack">
-          <img src="../src/assets/img/logos/wrs-turkey.png" alt="Logo 1" />
-          <img src="../src/assets/img/logos/wrs-turkey.png" alt="Logo 2" />
-          <img src="../src/assets/img/logos/wrs-turkey.png" alt="Logo 3" />
-          <img src="../src/assets/img/logos/wrs-turkey.png" alt="Logo 4" />
-        </div>
-      </div> -->
     <!-- Footer-->
     <footer class="footer" style="display: none;">
       <div class="container py-1">
