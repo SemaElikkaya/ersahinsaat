@@ -87,7 +87,7 @@
     </nav>
 
     <!-- Main a -->
-    <section class="page-section bg-custom" style="min-height: 48vh; margin-top: 10vh;">
+    <section class="page-section bg-custom" style="min-height: 48vh; margin-top: 8vh;">
       <div class="container">
         <h2 class="main-header" data-i18n="main_a_title">
         </h2>
@@ -118,7 +118,7 @@
           <h2 data-i18n="about_heading"></h2>
         </div>
         <div class="row g-0 justify-content-center">
-          <div class="image xl-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
+          <div class="about-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
             <img alt="About image" src="src/assets/img/ersah_2.png" />
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 ">
@@ -377,7 +377,7 @@
       <!-- Kentsel Dönüşüm ek görselleri -->
       <a href="src/assets/img/projects/kentsel_1.png" data-fancybox="kentsel-donusum" class="d-none"></a>
       <a href="src/assets/img/projects/kentsel_2.png" data-fancybox="kentsel-donusum" class="d-none"></a>
-       <a href="src/assets/img/projects/kentsel_3.png" data-fancybox="kentsel-donusum" class="d-none"></a>
+      <a href="src/assets/img/projects/kentsel_3.png" data-fancybox="kentsel-donusum" class="d-none"></a>
     </section>
 
 
@@ -392,7 +392,7 @@
           </div>
 
           <div class="stat-card">
-            <div class="stat-number" data-count="1000">0</div>
+            <div class="stat-number" data-count="10000">0</div>
             <div class="stat-plus">+</div>
             <div class="stat-label" data-i18n="stat_label_2"></div>
           </div>
@@ -404,8 +404,8 @@
           </div>
 
           <div class="stat-card">
-            <div class="stat-number" data-count="100">0</div>
-            <div class="stat-plus">%</div>
+            <div class="stat-number" data-count="38">0</div>
+            <div class="stat-plus" style="color: transparent;">+</div>
             <div class="stat-label" data-i18n="stat_label_4"></div>
           </div>
         </div>
@@ -422,30 +422,40 @@
             <form action="https://formsubmit.co/info@wrsturkey.com" id="contactForm" method="POST">
               <input type="hidden" name="_next" value="http://127.0.0.1:8080/#form-success">
               <div class="row align-items-stretch mb-4">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="contact-label" for="fullName" class="form-label" data-i18n="form_fullname"></label>
-                    <input class="form-control" id="fullName" name="ad_soyad" required="" type="text">
-                    </input>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="contact-label" for="fullName" class="form-label" data-i18n="form_fullname"></label>
+                      <input class="form-control" id="fullName" name="ad_soyad" required="" type="text">
+                      </input>
+                    </div>
+                    <div class="form-group">
+                      <label class="contact-label" for="email" class="form-label" data-i18n="form_email"></label>
+                      <input class="form-control" id="email" name="email" required="" type="email" />
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label class="contact-label" for="email" class="form-label" data-i18n="form_email"></label>
-                    <input class="form-control" id="email" name="email" required="" type="email" />
-                  </div>
-                  <div class="form-group mb-0">
-                    <label class="contact-label" for="phone" class="form-label" data-i18n="form_phone"></label>
-                    <input class="form-control" name="phone" required="" type="tel" />
+                  <div class="col-lg-6">
+                    <div class="form-group form-group-textarea mb-md-0">
+                      <label class="contact-label" for="messageText" class="form-label"
+                        data-i18n="form_message"></label>
+                      <textarea class="form-control" id="messageText" name="mesaj" required=""></textarea>
+                    </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="form-group form-group-textarea mb-md-0">
-                    <label class="contact-label" for="messageText" class="form-label" data-i18n="form_message"></label>
-                    <textarea class="form-control" id="messageText" name="mesaj" required=""></textarea>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group mb-0">
+                      <label class="contact-label" for="phone" class="form-label" data-i18n="form_phone"></label>
+                      <input class="form-control" name="phone" required="" type="tel" />
+                    </div>
                   </div>
-                </div>
-                <div class="contact-form-button text-end">
-                  <button class="btn btn-primary btn-xs" data-i18n="form_submit" id="submitButton" type="submit">
-                  </button>
+                  <div class="col-lg-6 align-content-end">
+                    <div class="contact-form-button text-end">
+                      <button class="btn btn-primary btn-xs" data-i18n="form_submit" id="submitButton" type="submit">
+                      </button>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </form>
@@ -463,9 +473,9 @@
             <div class="col-lg-3 col-md-3 col-sm-6 contact-info-container">
               <h3 class="section-heading contact-info-heading" data-i18n="solutions_heading"></h3>
               <div class="contact-info">
-                <a href="#accommodation"><span style="color: white;" data-i18n="solution_1"></span></a><br>
-                <a href="#meetingsandevents"><span style="color: white;" data-i18n="solution_2"></span></a><br>
-                <a href="#security"><span style="color: white;" data-i18n="solution_3"></span></a>
+                <a href="#about"><span style="color: white;" data-i18n="solution_1"></span></a><br>
+                <a href="#activities"><span style="color: white;" data-i18n="solution_2"></span></a><br>
+                <a href="#projects"><span style="color: white;" data-i18n="solution_3"></span></a>
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 contact-info-container">
@@ -477,12 +487,11 @@
           </div>
           <div class="w-90 text-center">
             <div class="social-media-icon-container">
-              <a aria-label="X" class="btn btn-light btn-social mx-3" href="https://x.com/wrsturkey"
-                rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-              <a aria-label="Instagram" class="btn btn-light btn-social mx-3" href="https://www.instagram.com/wrsturkey"
+              <a aria-label="X" class="btn btn-light btn-social mx-3"
+                rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+              <a aria-label="Instagram" class="btn btn-light btn-social mx-3" href="https://www.instagram.com/ersah.insaat"
                 rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a aria-label="LinkedIn" class="btn btn-light btn-social mx-3"
-                href="https://www.linkedin.com/in/wrs-turkey-611837363" rel="noopener noreferrer" target="_blank"><i
+              <a aria-label="LinkedIn" class="btn btn-light btn-social mx-3" rel="noopener noreferrer"><i
                   class="fab fa-linkedin-in"></i></a>
             </div>
           </div>
@@ -490,7 +499,7 @@
       </div>
     </section>
     <!-- Footer-->
-    <footer class="footer" style="display: none;">
+    <footer class="footer">
       <div class="container py-1">
         <div class="text-center">Copyright © Simgesel Media 2025</div>
       </div>

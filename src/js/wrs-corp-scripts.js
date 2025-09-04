@@ -40,19 +40,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const footer = document.querySelector('.footer');
 
-window.addEventListener('scroll', () => {
-  const scrollTop = document.documentElement.scrollTop;
-  const clientHeight = document.documentElement.clientHeight;
-  const scrollHeight = document.documentElement.scrollHeight;
+if (footer) {
+    function handleFooterVisibility() {
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
 
-  const scrollBottom = scrollTop + clientHeight >= scrollHeight - 5;
-
-  if (scrollBottom) {
-    footer.style.display = 'block';
-  } else {
-    footer.style.display = 'none';
-  }
-});
+        if (scrollTop + windowHeight >= documentHeight - 600) {
+            footer.classList.add('footer-visible');
+        } else {
+            footer.classList.remove('footer-visible');
+        }
+    }
+    
+    window.addEventListener('scroll', handleFooterVisibility);
+    handleFooterVisibility();
+}
 
 // calculate expanded card height --------------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
@@ -285,16 +288,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!navbar || !pageTop) return;
 
-    if (window.scrollY === 0) {
-      navbar.classList.remove('navbar-shrink');
+    // Sadece 990px üstünde shrink çalışsın
+    if (window.innerWidth > 990) {
+      if (window.scrollY === 0) {
+        navbar.classList.remove('navbar-shrink');
+      } else {
+        navbar.classList.add('navbar-shrink');
+      }
     } else {
-      navbar.classList.add('navbar-shrink');
+      // 990px altında shrink'i kaldır
+      navbar.classList.remove('navbar-shrink');
     }
   }
 
   const pageTop = document.getElementById('page-top');
   if (pageTop) {
     window.addEventListener('scroll', navbarShrink);
+    window.addEventListener('resize', navbarShrink); // Resize'da da kontrol et
     navbarShrink();
   }
 
@@ -305,14 +315,56 @@ document.addEventListener('DOMContentLoaded', () => {
       offset: 70
     });
   }
+
+
+
+
 });
 
+function initNavbarHide() {
+  if (window.innerWidth <= 990) {
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('mainNav');
+
+    window.addEventListener('scroll', function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop && scrollTop > 100) {
+        navbar.style.transform = 'translateY(-100%)';
+      } else if (scrollTop < lastScrollTop) {
+        navbar.style.transform = 'translateY(0)';
+      }
+
+      lastScrollTop = scrollTop;
+    });
+  }
+}
+initNavbarHide();
+window.addEventListener('resize', initNavbarHide);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Fancybox Lightbox - JS dosyanıza ekleyin (GLightbox kodunu silin)
-document.addEventListener('DOMContentLoaded', function() {
-  
+document.addEventListener('DOMContentLoaded', function () {
+
   // Scroll pozisyonunu kaydet
   let savedScrollY = 0;
-  
+
   // Fancybox başlatma
   if (typeof Fancybox !== 'undefined') {
     Fancybox.bind('[data-fancybox]', {
@@ -320,11 +372,11 @@ document.addEventListener('DOMContentLoaded', function() {
       animated: true,
       showClass: 'f-fadeIn',
       hideClass: 'f-fadeOut',
-      
+
       // UI ayarları
       closeButton: 'outside',
       dragToClose: false,
-      
+
       // Toolbar ayarları
       Toolbar: {
         display: {
@@ -333,32 +385,32 @@ document.addEventListener('DOMContentLoaded', function() {
           right: ['close']
         }
       },
-      
+
       // Scroll ayarları
       autoFocus: false,
       trapFocus: false,
       placeFocusBack: false,
-      
+
       // Açılma callback'i
       on: {
         init: (fancybox) => {
           // Scroll pozisyonunu kaydet
           savedScrollY = window.scrollY;
-          
+
           // Body'yi kilitle ama pozisyonu koru
           document.body.style.position = 'fixed';
           document.body.style.top = `-${savedScrollY}px`;
           document.body.style.width = '100%';
           document.body.style.overflow = 'hidden';
         },
-        
+
         destroy: (fancybox) => {
           // Body'yi serbest bırak
           document.body.style.position = '';
           document.body.style.top = '';
           document.body.style.width = '';
           document.body.style.overflow = '';
-          
+
           // Orijinal scroll pozisyonuna dön (timeout ile çakışmayı engelle)
           setTimeout(() => {
             window.scrollTo(0, savedScrollY);
@@ -367,13 +419,13 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-  
+
   // Overlay icon click handler
   document.querySelectorAll('.overlay-icon').forEach(icon => {
-    icon.addEventListener('click', function(e) {
+    icon.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();
-      
+
       // Parent project-image'yi bul
       const projectImage = icon.closest('.project-image');
       if (projectImage) {
@@ -385,17 +437,17 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
+
   // Hover efektleri (değişmedi)
   const projectCards = document.querySelectorAll('.project-card');
   projectCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
       if (window.innerWidth > 768) {
         this.style.transform = 'translateY(-10px)';
       }
     });
-    
-    card.addEventListener('mouseleave', function() {
+
+    card.addEventListener('mouseleave', function () {
       this.style.transform = 'translateY(0)';
     });
   });

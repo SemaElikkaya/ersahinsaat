@@ -2265,10 +2265,6 @@ section {
   .footer {
     font-size: 0.6rem !important;
   }
-
-  .container {
-    margin-bottom: 2rem !important;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -4031,19 +4027,52 @@ fieldset:disabled .btn {
   justify-content: space-between;
 }
 
-  .navbar>.container,
-  .navbar>.container-fluid,
-  .navbar>.container-sm,
-  .navbar>.container-md,
-  .navbar>.container-lg,
-  .navbar>.container-xl,
-  .navbar>.container-xxl {
+.navbar>.container,
+.navbar>.container-fluid,
+.navbar>.container-sm,
+.navbar>.container-md,
+.navbar>.container-lg,
+.navbar>.container-xl,
+.navbar>.container-xxl {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+@media (max-width: 991px) {
+  .navbar>.container {
     display: flex;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
+    justify-content: space-between;
   }
+
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid #00000026;
+  }
+
+  .navbar-nav .nav-item:last-child {
+    margin-right: 1rem !important;
+  }
+
+  .navbar-collapse {
+    padding: 1rem !important;
+  }
+
+  .navbar-collapse-dropdowns {
+    padding-top: 1rem;
+    justify-content: end;
+  }
+
+  .language-selector {
+    margin: unset !important;
+  }
+
+  .language-trigger {
+    padding-left: unset !important;
+    border: unset !important;
+  }
+}
 
 
 .navbar-brand {
@@ -4070,101 +4099,6 @@ fieldset:disabled .btn {
       rgba(29, 66, 95, 0.4) 80%,
       rgba(29, 66, 95, 0) 100%);
   backdrop-filter: blur(2px);
-}
-
-#video-container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  background: #EFF3F5;
-  z-index: 9999;
-}
-
-#video-container>video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-#video-container.fade-out {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-}
-
-#skip-intro {
-  position: absolute;
-  bottom: 1vw;
-  right: 2vw;
-  padding: 7px 25px;
-  font-size: 14px;
-  background-color: #1d425dab;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  z-index: 10000;
-}
-
-/* .dropdown {
-  width: fit-content;
-  position: relative;
-  display: inline-block;
-  height: 2rem;
-  padding: 0.25rem 0.5rem;
-  border: solid 1px #1C425D;
-  background: #1C425D;
-  border-radius: 30px;
-} */
-
-@media (max-width: 991px) {
-
-  .dropdown {
-    border: solid 1px #1C425D;
-    background: #1C425D;
-  }
-
-  .wrs-app-btn {
-    color: white !important;
-  }
-}
-
-.wrs-app-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: color 0.2s;
-  color: white;
-  font-family: var(--bs-font-family);
-  font-weight: bold;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-}
-
-.contact-btn {
-  margin-top: 1rem;
-  padding: 3px 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: none;
-  border-radius: 30px;
-  transition: color 0.2s;
-  background-color: #CAAB7C;
-  color: white;
-  font-family: var(--bs-font-family);
-  font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 0.04em;
-}
-
-.wrs-app-btn {
-  color: #1D425D;
 }
 
 .dropdown-icon {
@@ -4323,15 +4257,15 @@ fieldset:disabled .btn {
   color: #888;
 }
 
-  .navbar-collapse-dropdowns {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
+.navbar-collapse-dropdowns {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
 
-  .language-selector {
-    margin-left: 5rem;
-  }
+.language-selector {
+  margin-left: 5rem;
+}
 
 
 .ersah-insaat-logo {
@@ -4415,19 +4349,21 @@ fieldset:disabled .btn {
   color: #CAAB7C;
 }
 
-.navbar-shrink {
-  height: 8vh !important;
-}
-
 .navbar-nav {
+  --bs-nav-link-padding-x: 0;
+  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-font-weight: ;
+  --bs-nav-link-color: var(--bs-navbar-color);
+  --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
+  --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
 }
 
-.navbar-nav .show>.nav-link,
+.navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
   color: var(--bs-navbar-active-color);
 }
@@ -4449,6 +4385,9 @@ fieldset:disabled .btn {
 }
 
 .navbar-collapse {
+  background: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   white-space: nowrap;
   flex-basis: 100%;
   align-items: center;
@@ -4619,15 +4558,23 @@ fieldset:disabled .btn {
   }
 }
 
+@media (min-width: 992px) {
   .navbar-expand-lg {
     flex-wrap: nowrap;
     justify-content: flex-start;
-    height: 10vh;
-    transition: all 0.3s ease;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
   }
 
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: var(--bs-navbar-nav-link-padding-x);
+    padding-left: var(--bs-navbar-nav-link-padding-x);
   }
 
   .navbar-expand-lg .navbar-nav-scroll {
@@ -4667,6 +4614,7 @@ fieldset:disabled .btn {
     padding: 0;
     overflow-y: visible;
   }
+}
 
 @media (min-width: 1200px) {
   .navbar-expand-xl {
@@ -10042,11 +9990,13 @@ p {
 }
 
 #mainNav {
+  height: 8vh;
+  transition: all 0.3s ease;
   background: #ffffff;
 }
 
 #mainNav .navbar-toggler {
-  color: white;
+  color: black;
   padding: 0.75rem;
   font-size: 0.75rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10078,109 +10028,44 @@ p {
   color: #bf9733 !important;
 }
 
-
-@media (min-width: 992px) {
-  #mainNav {
-    padding-top: 1.5rem;
-    height: 9vh;
-    border: none;
-    transition: all 0.4s;
-  }
-
-  #mainNav .navbar-brand {
-    font-size: 1.5em;
-    transition: font-size 0.3s ease-in-out;
-  }
-
-  #mainNav .navbar-brand img {
-    height: 2rem;
-    transition: height 0.3s ease-in-out;
-  }
-
-  #mainNav.navbar-shrink {
-    height: 7vh;
-    transition: all 0.4s;
-  }
-
-  #mainNav.navbar-shrink .ersah-insaat-logo {
-    background-image: url('../assets/img/logos/ersah-logo.png');
-  }
-
-  .navbar-dark .language-trigger {
-    border-color: white;
-  }
-
-  #mainNav.navbar-shrink .navbar-brand {
-    font-size: 1.25em;
-  }
-
-  #mainNav.navbar-shrink .navbar-brand svg,
-  #mainNav.navbar-shrink .navbar-brand img {
-    height: 1.5rem;
-  }
-
-  #mainNav .navbar-nav .nav-item {
-    margin-right: 1rem;
-  }
-
-  #mainNav .navbar-nav .nav-item:last-child {
-    margin-right: 0;
-  }
+#mainNav .navbar-brand {
+  font-size: 1.5em;
+  transition: font-size 0.3s ease-in-out;
 }
 
-@media (max-width: 1300px) {
-
-  .navbar-expand-lg .navbar-collapse {
-    gap: 1rem;
-  }
-
-  #mainNav .navbar-nav .nav-item {
-    margin-right: 0 !important;
-  }
-
-  .navbar-collapse-dropdowns {
-    gap: 1rem;
-  }
+#mainNav .navbar-brand img {
+  height: 2rem;
+  transition: height 0.3s ease-in-out;
 }
 
-@media (max-width: 1100px) {
-
-  .navbar-expand-lg .navbar-collapse {
-    gap: 0.5rem;
-  }
-
-  .navbar-collapse-dropdowns {
-    gap: 0.5rem;
-  }
+#mainNav.navbar-shrink {
+  height: 6vh;
+  transition: all 0.3s;
 }
 
-@media (max-width: 991px) {
-  #mainNav {
-    height: 8vh;
-  }
+#mainNav.navbar-shrink .ersah-insaat-logo {
+  background-image: url('../assets/img/logos/ersah-logo.png');
+}
 
-  #mainNav .navbar-nav .nav-item .nav-link {
-    color: white;
-  }
+.navbar-dark .language-trigger {
+  border-color: white;
+}
 
-  .bg-custom {
-    margin-top: 64.7px !important;
-  }
+#mainNav.navbar-shrink .navbar-brand {
+  font-size: 1.25em;
+}
 
-  .navbar-collapse {
-    padding: 1rem !important;
-    background-color: #bf9733;
-  }
+#mainNav.navbar-shrink .navbar-brand svg,
+#mainNav.navbar-shrink .navbar-brand img {
+  height: 1.5rem;
+}
 
-  .ersah-insaat-logo {
-    margin-left: 1rem !important;
-    width: 150px !important;
-    height: 50px !important;
-  }
+#mainNav .navbar-nav .nav-item {
+  margin-right: 1rem;
+}
 
-  .navbar-toggler {
-    margin-right: 1rem;
-  }
+#mainNav .navbar-nav .nav-item:last-child {
+  margin-right: 0;
 }
 
 
@@ -10281,8 +10166,18 @@ p {
 }
 
 .about-section.container {
+  display: flex;
+  justify-content: center;
   position: relative;
   z-index: 1;
+}
+
+.about-image {
+  z-index: 2;
+}
+
+.about-image img {
+  width: 28vw;
 }
 
 .about-section h2 {
@@ -10799,7 +10694,7 @@ p {
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #bf9733, #d4a94a);
+  background: #e2b74f;
   border-radius: 12px;
   padding: 25px 20px;
   text-align: center;
@@ -10952,28 +10847,7 @@ section#contact form#contactForm .form-control:hover {
 .contact-label {
   font-weight: 600;
   color: #fff;
-  margin-bottom: 0.5rem;
   font-size: 0.95rem;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group-textarea {
-  height: 100%;
-}
-
-.form-group-textarea textarea {
-  height: 15rem !important;
-  resize: vertical;
-}
-
-
-.social-media-icon-container {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .section-title {
@@ -11121,9 +10995,6 @@ section#contact form#contactForm .form-control:hover {
   min-height: 70vh;
 }
 
-/*ikile*/
-
-
 section#contact form#contactForm .form-control {
   background-color: rgb(255 255 255 / 80%);
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -11137,11 +11008,20 @@ section#contact form#contactForm .form-control::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.form-group-textarea {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.form-group-textarea textarea {
+  flex: 1;
+  min-height: 0;
+}
 
 .contact-container {
   height: 100%;
 }
-
 
 .contact-info-container:hover {
   background: rgba(255, 255, 255, 0.12);
@@ -11163,16 +11043,17 @@ section#contact form#contactForm .form-control::placeholder {
 
 
 .social-media-icon-container {
-  margin-top: 2rem;
-  padding-top: 2rem;
+  margin: 2rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-social {
   width: 50px;
   height: 50px;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
   display: inline-flex;
@@ -11378,7 +11259,6 @@ section#contact form#contactForm .form-control::placeholder {
 
   .contact-form-button {
     text-align: center !important;
-    margin-top: 3rem;
   }
 
   .btn-social {
@@ -11476,9 +11356,14 @@ section#contact form#contactForm .form-control::placeholder {
 }
 
 .footer {
+  display: none;
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.footer.footer-visible {
+    display: block;
 }
 
 .glightbox {
