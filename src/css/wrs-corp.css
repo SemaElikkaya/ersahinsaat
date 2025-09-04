@@ -2312,15 +2312,6 @@ progress {
     font-size: 0.6rem !important;
   }
 
-  .btn-social {
-    width: 1rem !important;
-    height: 1rem !important;
-  }
-
-  .social-media-icon-container {
-    margin-top: 1rem;
-  }
-
   .container {
     margin-bottom: 2rem !important;
   }
@@ -12717,7 +12708,7 @@ p {
   .btn-xs {
     font-size: 0.8rem;
     font-weight: 700;
-    width: 30%;
+    width: 40%;
   }
 }
 
@@ -12758,20 +12749,25 @@ p {
 }
 
 .btn-social {
-  height: 2.5rem;
-  width: 2.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  border-radius: 100%;
 }
 
-/* Optimized CSS for Erşah İnşaat */
+.btn-social:hover {
+  background-color: #bf9733;
+  border-color: #bf9733;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(191, 151, 51, 0.3);
+}
 
-/* ===================
-   NAVBAR STYLES
-   =================== */
 #mainNav {
   background: #ffffff;
 }
@@ -12809,9 +12805,7 @@ p {
   color: #bf9733 !important;
 }
 
-/* ===================
-   RESPONSIVE NAVBAR
-   =================== */
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 1.5rem;
@@ -12923,9 +12917,7 @@ p {
   }
 }
 
-/* ===================
-   MAIN HEADER STYLES
-   =================== */
+
 .bg-custom {
   background-image: url(../assets/img/banners/banner.png);
   background-repeat: no-repeat;
@@ -12951,9 +12943,6 @@ p {
   font-family: "Allura", cursive;
 }
 
-/* ===================
-   IMAGE STYLES (ESKİ HALİNE GETİRİLDİ)
-   =================== */
 .image {
   display: flex;
   justify-content: center;
@@ -13007,9 +12996,7 @@ p {
   }
 }
 
-/* ===================
-   ABOUT SECTION STYLES (ESKİ HALİNE GETİRİLDİ)
-   =================== */
+
 .about-section {
   position: relative;
 }
@@ -13209,9 +13196,7 @@ p {
   transform: translateX(5px);
 }
 
-/* ===================
-   ACTIVITIES SECTION (ESKİ HALİNE GETİRİLDİ)
-   =================== */
+
 .activities-section {
   background: linear-gradient(180deg, #676767c7 0%, #1a1a1ae3 100%);
 }
@@ -13234,7 +13219,6 @@ p {
   letter-spacing: 3px;
 }
 
-/* Grid Sistemi */
 .activity-row {
   margin-bottom: 6rem;
 }
@@ -13256,7 +13240,6 @@ p {
   margin-left: calc(var(--bs-gutter-x) * -.5);
 }
 
-/* Resim Alanı */
 .activities-section .image.xl-image {
   position: relative;
   overflow: hidden;
@@ -13385,7 +13368,7 @@ p {
   transform: translateY(-10px);
 }
 
-/* FIX: Genişleyen li - JavaScript max-height'ini ezmek için */
+
 .hover-expand-list li.expanded {
   background: rgba(191, 151, 51, 0.15);
   border-color: #bf9733;
@@ -13397,7 +13380,7 @@ p {
   position: relative;
 }
 
-/* Metin Durumları */
+
 .text-preview {
   display: block;
   color: #ffffff;
@@ -13420,7 +13403,7 @@ p {
   font-style: italic;
 }
 
-/* Genişletilmiş Durum */
+
 .hover-expand-list li.expanded .text-preview {
   display: none;
 }
@@ -13433,9 +13416,7 @@ p {
   display: none !important;
 }
 
-/* ===================
-   PROJECTS SECTION
-   =================== */
+
 .projects-section {
   padding: 80px 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -13590,7 +13571,7 @@ p {
   font-weight: 500;
 }
 
-/* Mobil için */
+
 @media (max-width: 768px) {
   .stats-row {
     gap: 15px;
@@ -13646,21 +13627,43 @@ section#contact {
 }
 
 .contact-section .section-heading {
-  color: #bf9733;
+  color: #ffffff;
   font-family: "vollkorn", serif;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 section#contact form#contactForm .form-control:focus {
   border-color: #bf9733;
-  box-shadow: none;
+  background-color: rgb(255 255 255 / 45%);
+  box-shadow: 0 0 0 0.2rem rgba(191, 151, 51, 0.25);
+}
+
+section#contact form#contactForm .form-control:hover {
+  border-color: rgba(191, 151, 51, 0.5);
+  background-color: rgb(255 255 255);
+}
+
+.contact-form-button .btn-primary {
+  background: linear-gradient(135deg, #bf9733, #a08428);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(191, 151, 51, 0.3);
+}
+
+.contact-form-button .btn-primary:hover {
+  background: linear-gradient(135deg, #d4a940, #bf9733);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(191, 151, 51, 0.4);
 }
 
 .contact-cards {
   justify-content: space-between;
-}
-
-.contact-container{
-  height: 100%;
+  margin-top: 3rem;
 }
 
 .contact-info-container {
@@ -13674,19 +13677,44 @@ section#contact form#contactForm .form-control:focus {
   text-align: center;
 }
 
+.contact-info-heading {
+  color: #bf9733 !important;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
 .contact-info {
   font-size: 0.9rem;
+  line-height: 1.6;
 }
 
-.contact-info>a {
-  text-decoration: none;
-  font-weight: bold;
-}
 
 .contact-label {
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group-textarea {
+  height: 100%;
+}
+
+.form-group-textarea textarea {
+  height: 15rem !important;
+  resize: vertical;
+}
+
+
+.social-media-icon-container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .section-title {
@@ -13726,9 +13754,6 @@ section#contact form#contactForm .form-control:focus {
   font-style: italic;
 }
 
-/* ===================
-   ANIMATIONS
-   =================== */
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -13831,9 +13856,80 @@ section#contact form#contactForm .form-control:focus {
   animation-delay: 0.6s;
 }
 
-/* ===================
-   RESPONSIVE DESIGN
-   =================== */
+.contact-section {
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+}
+
+/*ikile*/
+
+
+section#contact form#contactForm .form-control {
+  background-color: rgb(255 255 255 / 80%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #000;
+  border-radius: 8px;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+section#contact form#contactForm .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+.contact-container {
+  height: 100%;
+}
+
+
+.contact-info-container:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(191, 151, 51, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info>a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-info>a:hover {
+  color: #bf9733 !important;
+  text-decoration: underline;
+}
+
+
+.social-media-icon-container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-social {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-social:hover {
+  background-color: #bf9733;
+  border-color: #bf9733;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(191, 151, 51, 0.3);
+}
+
+
 @media (max-width: 1399px) {
   .btn-xxl {
     font-size: 1.1rem !important;
@@ -13917,6 +14013,17 @@ section#contact form#contactForm .form-control:focus {
   .stat-icon i {
     font-size: 2rem;
   }
+
+  .btn-social {
+    width: 45px;
+    height: 45px;
+    margin: 0 10px;
+  }
+
+  .social-media-icon-container {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -13996,6 +14103,40 @@ section#contact form#contactForm .form-control:focus {
   .stat-label {
     font-size: 1rem;
   }
+
+  .contact-cards {
+    margin-top: 2rem;
+  }
+
+  .contact-info-container {
+    margin-bottom: 1rem;
+  }
+
+  .contact-section {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .contact-form-button {
+    text-align: center !important;
+    margin-top: 3rem;
+  }
+
+  .btn-social {
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+
+  .social-media-icon-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -14035,12 +14176,45 @@ section#contact form#contactForm .form-control:focus {
   .stat-label {
     font-size: 0.9rem;
   }
+
+  .btn-social {
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+    font-size: 0.8rem;
+  }
+
+  .social-media-icon-container {
+    gap: 8px;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .contact-section .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .contact-info-heading {
+    font-size: 1.1rem !important;
+  }
 }
 
-/* ===================
-   UTILITY CLASSES
-   =================== */
+@media (max-width: 480px) {
+  .btn-social {
+    width: 32px;
+    height: 32px;
+    margin: 0 3px;
+    font-size: 0.75rem;
+  }
 
+  .social-media-icon-container {
+    gap: 6px;
+  }
+
+  .contact-info-container {
+    padding: 1.5rem 1rem;
+  }
+}
 
 .footer {
   text-align: center;
@@ -14048,42 +14222,35 @@ section#contact form#contactForm .form-control:focus {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-/* GLightbox uyumluluğu için ek stiller */
+
 .glightbox {
   cursor: pointer;
 }
 
-/* Sayfa kaydırmasını önlemek için body'ye eklenen sınıf */
+
 body.lightbox-open {
   overflow: hidden;
   position: fixed;
   width: 100%;
 }
 
-/* Lightbox container ve içerik için düzeltmeler */
+
 .glightbox-container {
-  /* position: fixed; zaten GLightbox tarafından ekleniyor, bu CSS'i kaldırdık */
   display: flex;
   align-items: center;
-  /* Resmi dikeyde ortala */
   justify-content: center;
-  /* Resmi yatayda ortala */
 }
 
-/* Resmin kendi scrollbarını engelle */
 .glightbox-container a {
   max-width: 100% !important;
   max-height: 100% !important;
   object-fit: contain;
-  /* Görseli oranını bozmadan konteynere sığdır */
   display: block;
   margin: auto;
 }
 
-/* Lightbox title/description positioning fix */
 .glightbox-clean .gslide-description,
 .glightbox-clean .gslide-title {
-  /* Position absolute, ama fixed'e gerek yok */
   position: absolute;
 }
 
