@@ -52,10 +52,14 @@
             <li class="nav-item"><a class="nav-link" data-i18n="nav_about" href="#about"></a></li>
             <li class="nav-item"><a class="nav-link" data-i18n="nav_activities" href="#activities"></a></li>
             <li class="nav-item"><a class="nav-link" data-i18n="nav_projects" href="#projects"></a></li>
-            <li class="nav-item"><a class="nav-link" data-i18n="nav_careers" href="#careers"></a></li>
             <li class="nav-item"><a class="nav-link" data-i18n="nav_contact" href="#contact"></a></li>
           </ul>
           <div class="navbar-collapse-dropdowns">
+            <div class="dropdown">
+              <a href="#" onclick="showKariyer(); return false;">
+                <button class="kariyer-btn" data-i18n="career_btn"></button>
+              </a>
+            </div>
             <div class="language-selector">
               <div class="language-trigger">
                 <img src="../src/assets/img/icons/lang-icon.png" alt="language-icon">
@@ -119,7 +123,7 @@
         </div>
         <div class="row g-0 justify-content-center">
           <div class="about-image col-lg-6 col-md-12 col-sm-12 slide-in-left">
-            <img alt="About image" src="src/assets/img/ersah_2.png" />
+            <img alt="About image" src="src/assets/img/ersah_2.jpg" />
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 ">
             <div class="about-hover-expand">
@@ -223,8 +227,7 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="project-card">
               <div class="project-image">
-                <img src="src/assets/img/projects/proje_1.jpg" alt="Pendik Saray Evleri" data-fancybox="pendik-saray"
-                  data-caption="Pendik Saray Evleri - Modern mimari ve konforlu yaşam alanları">
+                <img src="src/assets/img/projects/proje_1.jpg" alt="Pendik Saray Evleri" data-fancybox="pendik-saray">
                 <div class="project-overlay">
                   <div class="overlay-icon">
                     <i class="fas fa-search-plus"></i>
@@ -232,8 +235,8 @@
                 </div>
               </div>
               <div class="project-info">
-                <h4 class="project-title" data-i18n="project_title_1">Pendik Saray Evleri</h4>
-                <p class="project-type" data-i18n="project_text_1">KONUT PROJESİ</p>
+                <h4 class="project-title" data-i18n="project_title_1"></h4>
+                <p class="project-type" data-i18n="project_text_1"></p>
               </div>
             </div>
           </div>
@@ -243,8 +246,7 @@
             <div class="project-card">
 
               <div class="project-image">
-                <img src="src/assets/img/projects/proje_2.jpg" alt="Kartal Lema Konakları" data-fancybox="kartal-lema"
-                  data-caption="Kartal Lema Konakları - Şehrin kalbinde lüks yaşam">
+                <img src="src/assets/img/projects/proje_2.jpg" alt="Kartal Lema Konakları" data-fancybox="kartal-lema">
                 <div class="project-overlay">
                   <div class="overlay-icon">
                     <i class="fas fa-search-plus"></i>
@@ -265,7 +267,7 @@
 
               <div class="project-image">
                 <img src="src/assets/img/projects/proje_3.jpg" alt="Maltepe İnönü Cd. Konut Proje"
-                  data-fancybox="maltepe-inoniu" data-caption="Maltepe İnönü Cd. Konut Projesi - Modern yaşamın adresi">
+                  data-fancybox="maltepe-inoniu">
                 <div class="project-overlay">
                   <div class="overlay-icon">
                     <i class="fas fa-search-plus"></i>
@@ -286,7 +288,7 @@
 
               <div class="project-image">
                 <img src="src/assets/img/projects/proje_4.jpg" alt="Pendik Sahili Konut Projesi"
-                  data-fancybox="pendik-sahil" data-caption="Pendik Sahili Konut Projesi - Deniz manzaralı lüks yaşam">
+                  data-fancybox="pendik-sahil">
                 <div class="project-overlay">
                   <div class="overlay-icon">
                     <i class="fas fa-search-plus"></i>
@@ -327,8 +329,7 @@
 
               <div class="project-image">
                 <img src="src/assets/img/projects/proje_6.jpg" alt="Kentsel Dönüşüm Projelerimiz"
-                  data-fancybox="kentsel-donusum"
-                  data-caption="Kentsel Dönüşüm Projelerimiz - Şehri yeniden tasarlıyoruz">
+                  data-fancybox="kentsel-donusum">
                 <div class="project-overlay">
                   <div class="overlay-icon">
                     <i class="fas fa-search-plus"></i>
@@ -471,11 +472,11 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 contact-info-container">
-              <h3 class="section-heading contact-info-heading" data-i18n="solutions_heading"></h3>
+              <h3 class="section-heading contact-info-heading" data-i18n="sitemap_heading"></h3>
               <div class="contact-info">
-                <a href="#about"><span style="color: white;" data-i18n="solution_1"></span></a><br>
-                <a href="#activities"><span style="color: white;" data-i18n="solution_2"></span></a><br>
-                <a href="#projects"><span style="color: white;" data-i18n="solution_3"></span></a>
+                <a href="#about"><span style="color: white;" data-i18n="sitemap_1"></span></a><br>
+                <a href="#activities"><span style="color: white;" data-i18n="sitemap_2"></span></a><br>
+                <a href="#projects"><span style="color: white;" data-i18n="sitemap_3"></span></a>
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 contact-info-container">
@@ -487,10 +488,11 @@
           </div>
           <div class="w-90 text-center">
             <div class="social-media-icon-container">
-              <a aria-label="X" class="btn btn-light btn-social mx-3"
-                rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
-              <a aria-label="Instagram" class="btn btn-light btn-social mx-3" href="https://www.instagram.com/ersah.insaat"
-                rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a aria-label="X" class="btn btn-light btn-social mx-3" rel="noopener noreferrer"><i
+                  class="fa-brands fa-x-twitter"></i></a>
+              <a aria-label="Instagram" class="btn btn-light btn-social mx-3"
+                href="https://www.instagram.com/ersah.insaat" rel="noopener noreferrer" target="_blank"><i
+                  class="fab fa-instagram"></i></a>
               <a aria-label="LinkedIn" class="btn btn-light btn-social mx-3" rel="noopener noreferrer"><i
                   class="fab fa-linkedin-in"></i></a>
             </div>
@@ -498,10 +500,94 @@
         </div>
       </div>
     </section>
+    <div id="kariyer-overlay" class="kariyer-overlay"></div>
+    <section id="kariyer" class="kariyer-section">
+      <div class="kariyer-content">
+        <div>
+          <button class="kariyer-close-btn" onclick="hideKariyer()">&times;</button>
+          <h2 data-i18n="career_title"></h2>
+        </div>
+        <div class="kariyer-policy">
+          <h3 data-i18n="hr_policy_title"></h3>
+
+          <div class="policy-container">
+            <div class="policy-text">
+              <p data-i18n="hr_policy_text"></p>
+
+              <p><strong data-i18n="basic_principles"></strong></p>
+              <ul>
+                <li data-i18n="principle_1"></li>
+                <li data-i18n="principle_2"></li>
+                <li data-i18n="principle_3"></li>
+                <li data-i18n="principle_4"></li>
+                <li data-i18n="principle_5"></li>
+                <li data-i18n="principle_6"></li>
+                <li data-i18n="principle_7"></li>
+                <li data-i18n="principle_8"></li>
+              </ul>
+
+              <button class="basvur-btn" onclick="openCareerForm()">
+                📧 <span data-i18n="apply_btn"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="careerFormModal" class="form-modal">
+      <div class="form-container">
+        <div class="form-header">
+          <button class="close-btn" onclick="closeCareerForm()">&times;</button>
+          <h2 data-i18n="career_form_heading"></h2>
+          <p data-i18n="career_form_subheading"></p>
+        </div>
+
+        <div class="form-content">
+          <form id="careerApplicationForm" onsubmit="submitCareerForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="careerFirstName" data-i18n="form_fullname"><span class="required">*</span></label>
+                <input type="text" id="careerFirstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="careerEmail" data-i18n="form_email"><span class="required">*</span></label>
+                <input type="email" id="careerEmail" name="email" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="careerPhone" data-i18n="form_phone"><span class="required">*</span></label>
+              <input type="tel" id="careerPhone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+              <label for="careerPosition" data-i18n="form_position"></label>
+              <input type="text" id="careerPosition" name="position">
+            </div>
+
+            <div class="form-group">
+              <label for="careerMessage" data-i18n="form_message"></label>
+              <textarea id="careerMessage" name="message" ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" data-i18n="form_submit"></button>
+          </form>
+
+          <div id="careerSuccessMessage" class="success-message">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+            <h3>Başvurunuz Alındı!</h3>
+            <p>En kısa sürede size geri dönüş yapacağız.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <!-- Footer-->
     <footer class="footer">
       <div class="container py-1">
-        <div class="text-center">Copyright © Simgesel Media 2025</div>
+        <div class="text-center" data-i18n="footer"></div>
       </div>
     </footer>
 

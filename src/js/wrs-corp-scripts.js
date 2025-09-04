@@ -41,20 +41,20 @@ document.addEventListener("DOMContentLoaded", function () {
 const footer = document.querySelector('.footer');
 
 if (footer) {
-    function handleFooterVisibility() {
-        const scrollTop = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
+  function handleFooterVisibility() {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
 
-        if (scrollTop + windowHeight >= documentHeight - 600) {
-            footer.classList.add('footer-visible');
-        } else {
-            footer.classList.remove('footer-visible');
-        }
+    if (scrollTop + windowHeight >= documentHeight - 600) {
+      footer.classList.add('footer-visible');
+    } else {
+      footer.classList.remove('footer-visible');
     }
-    
-    window.addEventListener('scroll', handleFooterVisibility);
-    handleFooterVisibility();
+  }
+
+  window.addEventListener('scroll', handleFooterVisibility);
+  handleFooterVisibility();
 }
 
 // calculate expanded card height --------------------------------------------------
@@ -498,3 +498,133 @@ document.addEventListener('DOMContentLoaded', function () {
   // Counter'ı başlat
   initCounterAnimation();
 });
+
+// Section ve overlay'i seç
+const karrierSection = document.getElementById('kariyer');
+const karrierOverlay = document.getElementById('kariyer-overlay');
+
+// Durum takibi
+let isKarrierOpen = false;
+
+// showKariyer fonksiyonunu güncelle
+function showKariyer() {
+  if (isKarrierOpen) {
+    // Açıksa kapat
+    karrierSection.classList.remove('show');
+    karrierOverlay.classList.remove('show');
+    isKarrierOpen = false;
+  } else {
+    // Kapalıysa aç
+    karrierSection.classList.add('show');
+    karrierOverlay.classList.add('show');
+    isKarrierOpen = true;
+  }
+}
+
+function hideKariyer() {
+  document.getElementById('kariyer').classList.remove('show');
+  document.getElementById('kariyer-overlay').classList.remove('show');
+  document.body.style.overflow = 'auto';
+}
+
+// Overlay'e tıklayınca kapansın
+karrierOverlay.addEventListener('click', function () {
+  if (isKarrierOpen) {
+    karrierSection.classList.remove('show');
+    karrierOverlay.classList.remove('show');
+    isKarrierOpen = false;
+  }
+});
+
+// Section'a tıklayınca kapansın (beyaz alan dışı)
+karrierSection.addEventListener('click', function (e) {
+  // Sadece section'ın kendisine tıklanırsa kapat (content'e değil)
+  if (e.target === karrierSection) {
+    karrierSection.classList.remove('show');
+    karrierOverlay.classList.remove('show');
+    isKarrierOpen = false;
+  }
+});
+
+// Content'e (beyaz alan) tıklayınca kapanmasın
+const karrierContent = document.querySelector('.kariyer-content');
+karrierContent.addEventListener('click', function (e) {
+  e.stopPropagation();
+});
+
+function openCareerForm() {
+  document.getElementById('careerFormModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCareerForm() {
+  document.getElementById('careerFormModal').classList.remove('show');
+  document.body.style.overflow = 'auto';
+
+  // Formu sıfırla
+  document.getElementById('careerApplicationForm').reset();
+  document.getElementById('careerSuccessMessage').classList.remove('show');
+  document.getElementById('careerApplicationForm').style.display = 'block';
+}
+
+// Modal dışına tıklandığında kapat
+document.getElementById('careerFormModal').addEventListener('click', function (e) {
+  if (e.target === this) {
+    closeCareerForm();
+  }
+});
+
+// ESC tuşu ile kapat
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeCareerForm();
+  }
+});
+
+function submitCareerForm(e) {
+  e.preventDefault();
+
+  // Form validasyonu
+  const form = document.getElementById('careerApplicationForm');
+  const formData = new FormData(form);
+
+  // Basit validasyon
+  const requiredFields = ['careerFirstName', 'careerEmail', 'careerPhone'];
+  let isValid = true;
+
+  requiredFields.forEach(field => {
+    const element = document.getElementById(field);
+    if (!element.value) {
+      isValid = false;
+      element.style.borderColor = '#e74c3c';
+    } else {
+      element.style.borderColor = '#e0e0e0';
+    }
+  });
+
+  if (!isValid) {
+    alert('Lütfen tüm zorunlu alanları doldurun!');
+    return;
+  }
+
+  // Email validasyonu
+  const email = document.getElementById('careerEmail').value;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Geçerli bir e-posta adresi girin!');
+    document.getElementById('careerEmail').style.borderColor = '#e74c3c';
+    return;
+  }
+
+  // Başarı animasyonu
+  form.style.display = 'none';
+  document.getElementById('careerSuccessMessage').classList.add('show');
+
+  // 3 saniye sonra formu kapat
+  setTimeout(() => {
+    closeCareerForm();
+  }, 3000);
+
+  // Burada normalde AJAX ile sunucuya gönderilir
+  console.log('Kariyer başvurusu gönderildi:', Object.fromEntries(formData));
+}
