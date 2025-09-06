@@ -165,7 +165,7 @@ function updateLanguageSelector(lang) {
 }
 
 function loadLanguage(lang) {
-  fetch(`/src/lang/${lang}.json`)
+  fetch(`./src/lang/${lang}.json`)
     .then(res => res.json())
     .then(data => {
       for (const key in data) {
