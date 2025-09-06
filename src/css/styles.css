@@ -4044,7 +4044,7 @@ fieldset:disabled .btn {
 .container .logo-link,
 .ersah-insaat-logo,
 .ersah-insaat-logo img {
-  height: -webkit-fill-available;
+  height: 8vh;
 }
 
 @media (max-width: 991px) {
