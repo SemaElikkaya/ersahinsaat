@@ -57,7 +57,7 @@ if (footer) {
   handleFooterVisibility();
 }
 
-// calculate expanded card height --------------------------------------------------
+// Calculate Expanded Card Height --------------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
   const listItems = document.querySelectorAll('.hover-expand-list li:not(.no-expand)');
 
@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const textFull = li.querySelector('.text-full');
 
     li.addEventListener('mouseenter', function () {
-      // expanded class'ını ekle
       this.classList.add('expanded');
 
       textPreview.style.display = 'none';
@@ -85,16 +84,13 @@ document.addEventListener('DOMContentLoaded', function () {
         textPreview.style.display = 'block';
         textFull.style.display = 'none';
 
-        // expanded class'ını çıkar
         this.classList.remove('expanded');
       }, 300);
     });
   });
 });
 
-
-
-// card animations ----------------------------------------------------------------
+// Card Animations ----------------------------------------------------------------
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -107,14 +103,11 @@ const observer = new IntersectionObserver((entries) => {
   rootMargin: '0px 0px -50px 0px'
 });
 
-// Tüm cardları observe et
 document.querySelectorAll('.card').forEach(card => {
   observer.observe(card);
 });
 
-
-
-// Lang --------------------------------------------------------------------------
+// Lang ----------------------------------------------------------------------------
 
 let currentLang = localStorage.getItem('selectedLanguage') || "tr";
 loadLanguage(currentLang);
@@ -203,9 +196,6 @@ window.i18n = {
   }
 };
 
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -223,28 +213,24 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
   const navbarToggler = document.querySelector('.navbar-toggler');
   const navbarCollapse = document.getElementById('navbarResponsive');
 
   function isMobileView() {
-  return window.innerWidth < 990;
-}
+    return window.innerWidth < 990;
+  }
 
-navLinks.forEach(link => {
-  link.addEventListener('click', function () {
-    if (isMobileView()) {
-      setTimeout(() => {
-        navbarToggler?.click();
-      }, 50);
-    }
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      if (isMobileView()) {
+        setTimeout(() => {
+          navbarToggler?.click();
+        }, 50);
+      }
+    });
   });
-});
 
   document.addEventListener('click', function (event) {
     if (navbarCollapse?.classList.contains('show') &&
@@ -286,15 +272,12 @@ navLinks.forEach(link => {
     }
   });
 
-
-
   function navbarShrink() {
     const navbar = document.getElementById('mainNav');
     const pageTop = document.getElementById('page-top');
 
     if (!navbar || !pageTop) return;
 
-    // Sadece 990px üstünde shrink çalışsın
     if (window.innerWidth > 990) {
       if (window.scrollY === 0) {
         navbar.classList.remove('navbar-shrink');
@@ -302,7 +285,6 @@ navLinks.forEach(link => {
         navbar.classList.add('navbar-shrink');
       }
     } else {
-      // 990px altında shrink'i kaldır
       navbar.classList.remove('navbar-shrink');
     }
   }
@@ -310,7 +292,7 @@ navLinks.forEach(link => {
   const pageTop = document.getElementById('page-top');
   if (pageTop) {
     window.addEventListener('scroll', navbarShrink);
-    window.addEventListener('resize', navbarShrink); // Resize'da da kontrol et
+    window.addEventListener('resize', navbarShrink);
     navbarShrink();
   }
 
@@ -321,10 +303,6 @@ navLinks.forEach(link => {
       offset: 70
     });
   }
-
-
-
-
 });
 
 function initNavbarHide() {
@@ -349,102 +327,57 @@ initNavbarHide();
 window.addEventListener('resize', initNavbarHide);
 
 
+// Fancybox Lightbox ---------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Fancybox Lightbox - JS dosyanıza ekleyin (GLightbox kodunu silin)
 document.addEventListener('DOMContentLoaded', function () {
 
-  // Scroll pozisyonunu kaydet
   let savedScrollY = 0;
 
-  // Fancybox başlatma
   if (typeof Fancybox !== 'undefined') {
-    Fancybox.bind('[data-fancybox]', {
-      // Temel ayarlar
-      animated: true,
-      showClass: 'f-fadeIn',
-      hideClass: 'f-fadeOut',
-
-      // UI ayarları
-      closeButton: 'outside',
-      dragToClose: false,
-
-      // Toolbar ayarları
-      Toolbar: {
-        display: {
-          left: [],
-          middle: [],
-          right: ['close']
-        }
-      },
-
-      // Scroll ayarları
-      autoFocus: false,
-      trapFocus: false,
-      placeFocusBack: false,
-
-      // Açılma callback'i
-      on: {
-        init: (fancybox) => {
-          // Scroll pozisyonunu kaydet
-          savedScrollY = window.scrollY;
-
-          // Body'yi kilitle ama pozisyonu koru
-          document.body.style.position = 'fixed';
-          document.body.style.top = `-${savedScrollY}px`;
-          document.body.style.width = '100%';
-          document.body.style.overflow = 'hidden';
-        },
-
-        destroy: (fancybox) => {
-          // Body'yi serbest bırak
-          document.body.style.position = '';
-          document.body.style.top = '';
-          document.body.style.width = '';
-          document.body.style.overflow = '';
-
-          // Orijinal scroll pozisyonuna dön (timeout ile çakışmayı engelle)
-          setTimeout(() => {
-            window.scrollTo(0, savedScrollY);
-          }, 0);
-        }
+  Fancybox.bind('[data-fancybox]', {
+    animated: true,
+    showClass: 'f-fadeIn',
+    hideClass: 'f-fadeOut',
+    closeButton: 'outside',
+    dragToClose: false,
+    Toolbar: {
+      display: {
+        left: [],
+        middle: [],
+        right: ['close']
       }
-    });
-  }
+    },
+    autoFocus: false,
+    trapFocus: false,
+    placeFocusBack: false,
+    on: {
+      init: (fancybox) => {
+        // Sadece scroll'u engelle, pozisyon ile uğraşma
+        document.body.style.overflow = 'hidden';
+      },
+      destroy: (fancybox) => {
+        // Scroll'u geri aç
+        document.body.style.overflow = '';
+      }
+    }
+  });
+}
 
-  // Overlay icon click handler
   document.querySelectorAll('.overlay-icon').forEach(icon => {
     icon.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();
 
-      // Parent project-image'yi bul
       const projectImage = icon.closest('.project-image');
       if (projectImage) {
         const img = projectImage.querySelector('img[data-fancybox]');
         if (img) {
-          // Fancybox'ı manuel aç
           img.click();
         }
       }
     });
   });
 
-  // Hover efektleri (değişmedi)
   const projectCards = document.querySelectorAll('.project-card');
   projectCards.forEach(card => {
     card.addEventListener('mouseenter', function () {
@@ -458,7 +391,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Counter animasyon (değişmedi)
   function initCounterAnimation() {
     const counters = document.querySelectorAll('.stat-number');
 
@@ -501,28 +433,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Counter'ı başlat
   initCounterAnimation();
 });
 
-// Section ve overlay'i seç
+
 const careerSection = document.getElementById('career');
 const careerOverlay = document.getElementById('career-overlay');
 
-// Durum takibi
+
 let isCareerOpen = false;
 
-// showcareer fonksiyonunu güncelle
+
 function showCareer() {
   if (isCareerOpen) {
-    // Açıksa kapat
+
     careerSection.classList.remove('show');
     careerOverlay.classList.remove('show');
     isCareerOpen = false;
     document.body.style.overflow = 'unset';
     document.body.style.maxHeight = '';
   } else {
-    // Kapalıysa aç
+
     careerSection.classList.add('show');
     careerOverlay.classList.add('show');
     isCareerOpen = true;
@@ -539,7 +470,7 @@ function hideCareer() {
   document.body.style.maxHeight = '';
 }
 
-// Overlay'e tıklayınca kapansın
+
 careerOverlay.addEventListener('click', function () {
   if (isCareerOpen) {
     careerSection.classList.remove('show');
@@ -548,9 +479,9 @@ careerOverlay.addEventListener('click', function () {
   }
 });
 
-// Section'a tıklayınca kapansın (beyaz alan dışı)
+
 careerSection.addEventListener('click', function (e) {
-  // Sadece section'ın kendisine tıklanırsa kapat (content'e değil)
+
   if (e.target === careerSection) {
     careerSection.classList.remove('show');
     careerOverlay.classList.remove('show');
@@ -558,7 +489,7 @@ careerSection.addEventListener('click', function (e) {
   }
 });
 
-// Content'e (beyaz alan) tıklayınca kapanmasın
+
 const careerContent = document.querySelector('.career-content');
 careerContent.addEventListener('click', function (e) {
   e.stopPropagation();
@@ -573,20 +504,20 @@ function closeCareerForm() {
   document.getElementById('careerFormModal').classList.remove('show');
   document.body.style.overflow = 'auto';
 
-  // Formu sıfırla
+
   document.getElementById('careerApplicationForm').reset();
   document.getElementById('careerSuccessMessage').classList.remove('show');
   document.getElementById('careerApplicationForm').style.display = 'block';
 }
 
-// Modal dışına tıklandığında kapat
+
 document.getElementById('careerFormModal').addEventListener('click', function (e) {
   if (e.target === this) {
     closeCareerForm();
   }
 });
 
-// ESC tuşu ile kapat
+
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     closeCareerForm();
@@ -596,11 +527,11 @@ document.addEventListener('keydown', function (e) {
 function submitCareerForm(e) {
   e.preventDefault();
 
-  // Form validasyonu
+
   const form = document.getElementById('careerApplicationForm');
   const formData = new FormData(form);
 
-  // Basit validasyon
+
   const requiredFields = ['careerFirstName', 'careerEmail', 'careerPhone'];
   let isValid = true;
 
@@ -619,7 +550,7 @@ function submitCareerForm(e) {
     return;
   }
 
-  // Email validasyonu
+
   const email = document.getElementById('careerEmail').value;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
@@ -628,15 +559,15 @@ function submitCareerForm(e) {
     return;
   }
 
-  // Başarı animasyonu
+
   form.style.display = 'none';
   document.getElementById('careerSuccessMessage').classList.add('show');
 
-  // 3 saniye sonra formu kapat
+
   setTimeout(() => {
     closeCareerForm();
   }, 3000);
 
-  // Burada normalde AJAX ile sunucuya gönderilir
+
   console.log('Kariyer başvurusu gönderildi:', Object.fromEntries(formData));
 }
