@@ -347,19 +347,6 @@ document.addEventListener('DOMContentLoaded', function () {
         right: ['close']
       }
     },
-    autoFocus: false,
-    trapFocus: false,
-    placeFocusBack: false,
-    on: {
-      init: (fancybox) => {
-        // Sadece scroll'u engelle, pozisyon ile uğraşma
-        document.body.style.overflow = 'hidden';
-      },
-      destroy: (fancybox) => {
-        // Scroll'u geri aç
-        document.body.style.overflow = '';
-      }
-    }
   });
 }
 
