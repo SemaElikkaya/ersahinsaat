@@ -58,8 +58,10 @@
   "ongoing_projects_heading": "Our Ongoing Projects",
   "ongoing_project_title_1": "Kartal Kordonboyu Project",
   "ongoing_project_text_1": "Residential Project",
-  "ongoing_project_title_2": "Kartal Kayacık Project",
+  "ongoing_project_title_2": "Kartal Yakacık Project",
   "ongoing_project_text_2": "Residential Project",
+  "ongoing_project_title_3": "Kartal Atalar Project",
+  "ongoing_project_text_3": "Residential Project",
 
   "half_from_us_section_title": "Half From Us Campaign",
   "half_from_us_section_subtitle": "Government-supported urban transformation program for earthquake-resistant living spaces in Istanbul",
@@ -135,6 +137,7 @@
   "sitemap_1": "About Us",
   "sitemap_2": "Activities",
   "sitemap_3": "Projects",
+  "sitemap_4": "Half From Us",
 
   "our_corp_heading": "Our Company",
   "about_corp": "About Erşah Construction"
